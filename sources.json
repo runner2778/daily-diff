@@ -1,0 +1,362 @@
+[
+ {
+  "name": "36氪",
+  "url": "https://www.36kr.com/feed",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "商业",
+  "weight": 3
+ },
+ {
+  "name": "IT之家",
+  "url": "https://www.ithome.com/rss/",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "少数派",
+  "url": "https://sspai.com/feed",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "生活",
+  "weight": 2
+ },
+ {
+  "name": "Solidot",
+  "url": "https://www.solidot.org/index.rss",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "虎嗅",
+  "url": "https://www.huxiu.com/rss/0.xml",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "商业",
+  "weight": 2
+ },
+ {
+  "name": "界面新闻",
+  "url": "https://a.jiemian.com/index.php?m=article&a=rss",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "商业",
+  "weight": 2
+ },
+ {
+  "name": "爱范儿",
+  "url": "https://www.ifanr.com/feed",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "cnBeta",
+  "url": "https://www.cnbeta.com.tw/backend.php",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "科技",
+  "weight": 1
+ },
+ {
+  "name": "TechCrunch",
+  "url": "https://techcrunch.com/feed/",
+  "region": "美国",
+  "lang": "en",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "The Verge",
+  "url": "https://www.theverge.com/rss/index.xml",
+  "region": "美国",
+  "lang": "en",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "Ars Technica",
+  "url": "https://feeds.arstechnica.com/arstechnica/index",
+  "region": "美国",
+  "lang": "en",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "Hacker News",
+  "url": "https://hnrss.org/frontpage",
+  "region": "美国",
+  "lang": "en",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "MIT科技评论",
+  "url": "https://www.technologyreview.com/feed/",
+  "region": "美国",
+  "lang": "en",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "Wired",
+  "url": "https://www.wired.com/feed/rss",
+  "region": "美国",
+  "lang": "en",
+  "cat": "科技",
+  "weight": 1
+ },
+ {
+  "name": "纽约时报",
+  "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+  "region": "美国",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 3
+ },
+ {
+  "name": "NPR",
+  "url": "https://feeds.npr.org/1001/rss.xml",
+  "region": "美国",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 2
+ },
+ {
+  "name": "CNBC",
+  "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+  "region": "美国",
+  "lang": "en",
+  "cat": "经济",
+  "weight": 2
+ },
+ {
+  "name": "华尔街日报",
+  "url": "https://feeds.a.dj.com/rss/RSSWorldNews.xml",
+  "region": "美国",
+  "lang": "en",
+  "cat": "经济",
+  "weight": 3
+ },
+ {
+  "name": "BBC",
+  "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+  "region": "英国",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 3
+ },
+ {
+  "name": "BBC 商业",
+  "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+  "region": "英国",
+  "lang": "en",
+  "cat": "经济",
+  "weight": 2
+ },
+ {
+  "name": "卫报",
+  "url": "https://www.theguardian.com/world/rss",
+  "region": "英国",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 2
+ },
+ {
+  "name": "金融时报",
+  "url": "https://www.ft.com/rss/home",
+  "region": "英国",
+  "lang": "en",
+  "cat": "经济",
+  "weight": 3
+ },
+ {
+  "name": "经济学人",
+  "url": "https://www.economist.com/finance-and-economics/rss.xml",
+  "region": "英国",
+  "lang": "en",
+  "cat": "经济",
+  "weight": 3
+ },
+ {
+  "name": "德国之声",
+  "url": "https://rss.dw.com/rdf/rss-en-world",
+  "region": "德国",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 2
+ },
+ {
+  "name": "明镜周刊",
+  "url": "https://www.spiegel.de/international/index.rss",
+  "region": "德国",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 2
+ },
+ {
+  "name": "世界报",
+  "url": "https://www.lemonde.fr/rss/une.xml",
+  "region": "法国",
+  "lang": "fr",
+  "cat": "国际",
+  "weight": 2
+ },
+ {
+  "name": "国家报",
+  "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+  "region": "西班牙",
+  "lang": "es",
+  "cat": "国际",
+  "weight": 1
+ },
+ {
+  "name": "瑞士资讯",
+  "url": "https://www.swissinfo.ch/chi/rss",
+  "region": "瑞士",
+  "lang": "zh",
+  "cat": "社会",
+  "weight": 1
+ },
+ {
+  "name": "半岛电视台",
+  "url": "https://www.aljazeera.com/xml/rss/all.xml",
+  "region": "中东",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 2
+ },
+ {
+  "name": "日本时报",
+  "url": "https://www.japantimes.co.jp/feed/",
+  "region": "日本",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 2
+ },
+ {
+  "name": "日经亚洲",
+  "url": "https://asia.nikkei.com/rss/feed/nar",
+  "region": "日本",
+  "lang": "en",
+  "cat": "经济",
+  "weight": 3
+ },
+ {
+  "name": "韩国先驱报",
+  "url": "https://www.koreaherald.com/rss/020000000000.xml",
+  "region": "韩国",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 1
+ },
+ {
+  "name": "印度时报",
+  "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
+  "region": "印度",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 1
+ },
+ {
+  "name": "联合早报",
+  "url": "https://www.zaobao.com.sg/rss/realtime/world",
+  "region": "新加坡",
+  "lang": "zh",
+  "cat": "国际",
+  "weight": 2
+ },
+ {
+  "name": "海峡时报",
+  "url": "https://www.straitstimes.com/news/world/rss.xml",
+  "region": "新加坡",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 1
+ },
+ {
+  "name": "全非洲",
+  "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+  "region": "非洲",
+  "lang": "en",
+  "cat": "国际",
+  "weight": 1
+ },
+ {
+  "name": "圣保罗页报",
+  "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
+  "region": "巴西",
+  "lang": "pt",
+  "cat": "国际",
+  "weight": 1
+ },
+ {
+  "name": "号角报",
+  "url": "https://www.clarin.com/rss/lo-ultimo/",
+  "region": "阿根廷",
+  "lang": "es",
+  "cat": "国际",
+  "weight": 1
+ },
+ {
+  "name": "Nature",
+  "url": "https://www.nature.com/nature.rss",
+  "region": "英国",
+  "lang": "en",
+  "cat": "科学",
+  "weight": 2
+ },
+ {
+  "name": "IEEE Spectrum",
+  "url": "https://spectrum.ieee.org/feeds/feed.rss",
+  "region": "美国",
+  "lang": "en",
+  "cat": "科学",
+  "weight": 2
+ },
+ {
+  "name": "量子位",
+  "url": "https://www.qbitai.com/feed",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "极客公园",
+  "url": "https://www.geekpark.net/rss",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "新浪科技",
+  "url": "http://rss.sina.com.cn/tech/rollnews.xml",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "科技",
+  "weight": 2
+ },
+ {
+  "name": "创业邦",
+  "url": "https://www.cyzone.cn/rss/",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "商业",
+  "weight": 1
+ },
+ {
+  "name": "钛媒体",
+  "url": "https://www.tmtpost.com/rss.xml",
+  "region": "中国",
+  "lang": "zh",
+  "cat": "商业",
+  "weight": 2
+ }
+]

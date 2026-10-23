@@ -1,0 +1,60 @@
+name: 每日抓取并发布
+
+on:
+  schedule:
+    # UTC 22:10 = 北京时间 06:10
+    - cron: "10 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖
+        run: pip install qrcode
+
+      - name: 抓取 + AI 总结
+        env:
+          DD_LLM_KEY: ${{ secrets.DD_LLM_KEY }}
+          DD_LLM_BASE: ${{ secrets.DD_LLM_BASE }}
+          DD_LLM_MODEL: ${{ secrets.DD_LLM_MODEL }}
+        run: |
+          python3 collector.py --limit 40
+          python3 build.py
+
+      - name: 提交今日快照
+        run: |
+          git config user.name "daily-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add feed.json
+          git diff --quiet && git diff --cached --quiet || git commit -m "chore: $(date +%F) 自动更新"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

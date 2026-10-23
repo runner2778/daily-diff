@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+qr.png
+local.json
+.DS_Store

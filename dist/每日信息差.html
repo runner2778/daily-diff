@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+<meta name="theme-color" content="#f5f0e5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>每日信息差 · 小学生也能看懂</title>
+
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAfnElEQVR4nO2deZgU1bn/3/ecqurqbfYBZtgGQRQZdgRB1JjNxKx6TbxZjDGaxBhNiHLjAi5xjZobzdWIEpMQzX713mjyuzGLQRONirIE2ZQdEWHW3ru2c97fHz2DI85091DTdPVQn6d8eISaOme6vv2e97znPe/B5z88A3x8jhRW7g74VDa+gHxc4QvIxxW+gHxc4QvIxxW+gHxcoVC5e+BT0fgWyMcVCvgmyMcFvgXycYUCvgnycYFvgXxc4QvIxxW+gHxc4ceBfFzhWyAfV/gC8nGFH0j0cYVvgXxc4QvIxxV+JNrHFf403scV/hDm4wpfQD6u8AXk4wo/DuTjCt8C+bjCF5CPK3wB+bjCjwP5uMK3QD6u8JcyfFzhWyAfV/gC8nGFH0j0cYVvgXxc4U/jfVzhWyAfV/gCGiIQy92D8qCUuwNDBjLW8xap9z8ioKMyRBOREExVARGIjl67HmC4CIjITiZASkDMXYwrqKrIOTJW0pdKRFwL8EDA6Ggnx0bOmRZARSl1ux5heAiIgLGJF18WbB5rth80OzuMA/vNjjaj7YCdiEvLRK6wQIApKgCQlEPYMDLmpJIjTj3j+MXXJV5dm3htc2LLxvTuHWZnR0+7qoaqOozFNCyWMhBIOFUnTq1beDZABoADSMomre6uzL69ia2bYxvXJ1/bbHa0IWM8GELGSYqhahqEUzVlqlrTVH/ae+tPOwvItNrb0rt2xLdsiG/emN613Wxvk5YJjHEtgIqKfFiJCZ95/9Ry98E1iOQ4wHDmnT+smX2yTCeRK8g5KAowFUABMs0D+7vWvNS26i/d618W2awSiQIiuLdGiNK2Zv/n8upZp8h0AhlDxkBVgWsAHMiyO9vTu3fGN29MbHk1tWOb0X5QGFlkjKkaU9Wh+OXLDK4aBgICQMaEYegjR865f2WgrhEcE/DtL3rvSw0CmYlNG954/Ndtz/yZhOShEAkXpgiRbDvQ0DhvxS+UaBU4Tq8X36ddRQElAMABbNHdmdq9M7F1U2zThtSO17MH3mJKxbsQw0RAAICc24lE48LTpt9xP0gbid4xtSYiKZEx0EMArPvl57Yvvye+dZMarTpirwg5d5LJxtPfO/22H4CZAdZfTOTQaIWIqgqKCsCAHCeRyL6599WbrjHbD6KqVu5wNnziQCSEWlXV9twz+377MwxED5cFInIOiJRNUzZRe/Kps+/76eiPnGMnE9jviy+yUSlqZ8wCptJACkBExnKTQbItMA0AAlSU6hGp7a+bHW0VrR4YLrOwHkgINVq1Y+VDtbPnRU5sJSPzbnHk/oYySa6qU5beoUaju3/9qBp9l+CKa46HwrXTZwPYBQOJJAXqIaero/2p35vxWGz9K12vvIRaZasHhpmAIDespJLbVvzXrLuXAyIAAfTzapFzkA6ZqUlXXGO0tR1Y9Sc1WjU4f4ihNMzIhImhlolgmfnNGAmBobDV0b5h6eLuda+gqiIiD4UrXT0wnIawHCSEEol2rn7+wFNPoB4lMbBdQYaSQDiTr1iijxglLWtQyxGITNpWdet0FqrOrzwSDoaixr431i/5WnzjBq2+QY1UKeHIMFAPDD8BAQBJyVRt9y9XikRnAQ+DMbKy2sjxYz5+npPtZ7zL2wwAY7WzTi5wlxAYqk1u2bD2W19O7nhdiUbJcUiKAUfMnIgPLct4HpabIgyfC4AksUAwuWv7/v/3O1DDBZwb5CDNxtPeo1ZVS8chKK4JQGFbgYaRNa0zQRjY78vOzftCte3PPrX2ykuzBw/yUEQ6ggD6aSX3N4BSCCIS2SxJImRv/5NXr2FngQggZ4S0wL4nHxPJDlTVPNF2ZACOFWoeq48YJS27X4fp3U0gojCyta0ztBHN1N/YR1IC4xiM7P3lig3XLxGGwXWdhNPTw3d3hwAQSQogmHHz9yZdcpnIZsiykHMgT490rPcXGl4XSR4IpPbsbP/HKlBD+TwhQCBCTeN6kEggQnFNABA0LDgNsJ8XTEJgMCQde8vt1712311MU5lyaPFkwGcigsikT7j8yrqFHxj/hUtn3HGvWlXtpBLIlfJ/ngNfw84C9QGR7f/TH8Ax+w/x9bkPHCEdGxAP18IA90vHDjQ01s6aC/Kd86+eYasmvf21NYu/vO+Jx9VoNSAOGCU69Eiu2PF4y/kXjD73Asp0USbZePpZcx9YWTtzrhXrRg+7RMNWQETEg8HElo2Z3dsxoA84EBCBopidbWZ7G1OUYsYLRJRGtmbq9EDTGDDNQ6+WpACuYDCy//e/eeXyL8U3v6rW1JAUBZ+JimIn4o2Lzpj09SVkpnKBR8rEg6PHzLrnoZbPXuikUiSEm4Bn6fBin4YGIuTcTsQ7Vr8AqA3kSpMQwPSuNavNznamaEU6HATQuOhMwN4ANBEJgcGok81svn3ppjuWCctUQpFiAkvImEinIxOOm3rtLYisJ6UJADknw2AAk7+5bOqy25iqOtkscj6IT+CoMHwFBAAEwFjs1bUgrR7H5bB/lwK1gEx173nsl0zV+r3ncBClbQdHNjXMXwhOFhkjKYAxDNXG17+85vIvvvnkY2qkCnlxGSOI0nF4ONx6/R1qwwiyjb5mBhkDKSmbaDr7vDn3PhxpOc6Ox72mIS/uyhgqW00ILKCn9u4GYWOoGowUQJ/kZSIMhgHY1ru+k9y5rScSXahp5NxJp+pOXqA2NlMmgYxhsJrM9K4f37v7VyvJsdXaehJOT2JkgWchEAnLbF16S3TKLMp0I3/XwgAiIlImFp3SOve+n2y+++YDTz+lRqsAoKBfdXTw3lIGkZNOEQ2B10gACJjc8fqrt1w34fMXh8dPQMYhZxgQgfHU9m3bHvjegVV/ViJRKx4vrkWUUjZ94GwgCYjEeefzT29bfk/3hnVqNArIRDxWbM+RCSN7wtevHPG+j1Mm1o96Dt3IOWVSSiQy/ZbvRyZM3LFyBdM0pihDm115ZODT7z2p3H3oAxGqau20mVicP1skTjqt1dbVz19YN2eeXt8IAE42071+bdszfzY6OtRIpNg3gShtKziq+YTLlyBjwJXOl57f+z+/JsdRwmGSsvg+I6KwzMhxxx//tcXkOEVJjiQAgl518K9Pbrn7FjuVUkKhsmvIYwJCJMeZd/9Poq0ng5MuOKAUC+Pg2DKbAUBUVQQgIaRweDAEqgaUewdYyAdCAOqRiGUREQJI4bBgGDg7wuRGZGQaQISIVNgDQyAiKVi4JrFx3ea7vpPes6vs2SDeGsKQMTuTPvj3p6OtC4CgqLhwMUgJnLNoNQDkPm5E4IBABMIB2x7Eo1QVkEEggIAAwBCBJEg6wq6SxEAg97PFjnsAIK2q1gW1s+YmXt+iBgKukipd462kepKCBwIdLz3f9KF/HY3AGRHX9UDjyOK/xMZbb0rTBMbK9r2X0kwk2lb9ad8f/lcJh3uWR8oHPv3eKeXtwbshKRFKvtcTGbeT8eazP9l6452UTReY+hGBwkUq9dKlF2Te3Me0YiNGpUA6trRsJRTyQnjaW0NYjqMUcmVIUobHjQco7EYQESqq0XYw23aQaRpAOfcyMy3AA8Eh25nkDi/GgY4SRKhpodHjAIrwf4kA1OSuHY6RVcNFz9ryk9tXlPu2DMqeERF5Qj0wzCPRecnlnYVGjwVwijMnmN61nZwiby74MCThoKJKyyLheHOdqxgqtd9uQSQhtOqaQEMDCKf/jLC+tzMGZCV3bmd8KAJUOduDbNbt95x01VIgEobhtTWKIjlGS9whorDtQEOjWl0LjlN4Es25TCfTb+xBRSFZRMimUOt2JtN69Y21c0+vnSvC44/bdOdNqZ3b1arqQUUjvcCxaoEAyBGh5rGoh0nK/PohKUFRs/vfNNrbchUa3IBcseKxlk99fvQ5n6NsN6XjNTNPnvfDlU3v/7Adj0FuP2vlUEl9HUoQSYro5BMBiskZJUA1uXObk0q6zDFFzp1kvHHBaZOvWEJmGpGholAmqVZVTb/1nhMuX0KOLU2zgoazY1RARMS0QHTCpOKmYACA8S2bqDdZ58hAxkQ2GxozrnXprcg5SHEo9Qccm8xMyxcum3XXD7X6RjuZqBQNsfJn1R79C1E6jlJVFW6ZANIqOGQg52Cn469vQUUhoiNuVAiBmjbt+tsCI5vJfEfqDyBDRMp01Z9y+rwHVtaffIoZ6wbGCLH8H1feqwKS6pHhEF+ckXBCTc2BhkYoOC0nAlU12g6k9+ziug4IR9yuyKSnfOvq6hkLKNO/gUGuUCahj2qa858PTvjMhU4qQVIgw7K/gjyXFyPRfSEpRTYztM9Ezq14LDRmHOpVlCmQ40dSItO716/JvPmGGokeYfwXmchmJn3xq6M/9u+U7S9xrE/fwDSQ8ROvvCEycdLWe+8UpsEDetnTNgYC/3LmieXuQ/8gY04mXT/3lIlf+jqZWWRDuHSA5DjBptHB0eNAFKqLQARcye7fl9m/jylHuvZMAIg1rTOQK4dcn/yNEkkM1navfW7DzdeanR3lXX3Lg3cFBIjSNMPjJ5z6s/8GRS/K2x0EDKQDtllMGgVJiaoKSnFJ03mek81AT6plwecgAJHjsGiDuX/Xi5d+wYp3Ic+3Q7JceDiQSMS1QGrXztiG9TWzzwRKAg7VxARBWGBZRSWsEaGuA6oA0mV+Egajg7sfgITR8fILdjKBbChTNIcQT/tABICI2368PPrsKrLNIVmEQsZENlM7Y07z2Z+EQs8kKTEQav/7Xw/+fdVRzh9FBGFZ6d27Ypv+hYrq2T3O3l6NJ2KBQNf6VzpW/3Oo0ieQMTsen9ZyHHCdzAI7rRARgHb/9y8OrvqrckRFqFzCuMKDQcrVyfMknrZAAEBETA/yYGgIn6hEqxpPWQRkFnDMiUDTjP17kzu36yNGwtGJ7FHvOEk9jpBn5185vC4gAAAph+rbh4w52WzNiSeFxo4Hq4jxi+ndG9abnR1qJHqUU48RkYbs9y4hx9hSBqK0rNrpszGQE0ReC4QIJNpeeA4Ihiy9vwiIJEkhcrVdPE8FRKKH7gIgyVSlbvbcwkEBItQ0q21f17qXuR7ozQAsZd8gt5k/1nLeZ+fc9YBWXd1nRYxK3PqRX8eSBUKQtq03jqiZMhVEobKYUgLXO9esNtoOsJ69V1TKzhFybifjIxYsOv6SK+rnnzF/+SN1M+dYsS5kWFzoqDywciv46F2ITBhG9YlT1fpR/ZYVeweIQOLgs3/L/c/R6VtwZFPrtbeiqlK6IzR2/Mk/eLjlU5+zEwmQEtGjb+pYskAAIKnxlNOAFdiGQUQY0LN7tneuXc31/AXOhoJcBSqCadd8Rx/dQmYWlQAZWcbwpKtvmXr1jSRJeDVJ6JhJ50AUtq3W1TfMnQfShPwTeCmBBQ48+7TR1YWqQnCkKRzFXcCYlUhM/srl9Qvf37u4S721XZLjzvvi3HseDDQ2WskEcF7+T/Kd17FigRBRGEbN1Gn6mBawTMR8vzgqChmJt1b9hWkalHgujZxb8fjos86ecMFXyIgj62NmEJExynTXzVl4ygOPNMyeZ8ViuQMbStqlQXGsCAgQgeSo098HTM0fmiMpQAt1rlmdeG2LEgwSlXD8Qs6dTKZ60uSp374RhN3vFvlcuTt9VNPce1aMP/d8Ox4DylWX9QTeCCQiFtxY4/L55Dj6yFEjFi4CYRRKQUQAePP/niApS+t2IJLjcF2fvuw2taaeMsmBmkOukGkwzluX3h4e1/La8nuQK0zTyltWIYcHBIRIji3MoVkr7b8Fxq1EvOXMD2gjx1I2mUdAJCXqoeTGtfuffgpI2ol4ibqU65d0nJk33F7VOqf/8mR9b+11iSZc8LXQmLGv3n69k85wvfyJZvinM04oZ/uMiUxm5KIzms76BJmFKhwcMbkA9IzZoTEt5Fh5rB0Roaqld22PbdrAtACUcPzC3PlUjYveA05xBc5zPRQCQzWJTWvXLb0ye/AtHgyWV0NlFhAy7qRTjQsWzb33ZwAGAJZg0YAAEEABYYBd+EQVchzUNFB19wlARXRNyky6txRJMd465nrIqmqs9gMvXnZR9q03y1tjSilvngBJwQKB7g3rzP07As0nABil8euJsnEsXPiSADmG6wEAQACUPu6CwML64H9IAsj0G3vsVOrtk+rLRLl9ICJgzDGMrQ/+IHzc5IIZXoMi980mIbgeHH/Op1AP5itERwRccZKJvU/8RA5VBYXSQI6T2ru77Z9/l5bFNK28JqDcAgIAIqZp+/74pLRtLPKwgWKfDIwzK5kYc9ZHWz53MdnZPOEfkhL18Bt/+NmG796khKMlnb27BAGQK0oo5IVMew8ICACI1EgUkPX6K0MGMuTB0KQvXIJcIWvgZxOhqtkd+3Y/9it9RBMP5Crbe9YIERCRpLKrB7wiIACScqj3XQAyZiczta0zaqbPyT/FIylQr97zuxXpfXu0mlo5qLKbLrpX9km4e7wS0CwJiCSccZ/4NwyEIU/MjQi1oLl/157/+Y0SKnRA3dDhZNJFFbT3NsNWQLkEiejE40ed+UGwUvnMD0lQ9B0/fzh74K2j6VU0zD1FmmZFlyeDYbwaDwyFaYz96Dk82pCnLh1JiXoksemVvX/4nRrt2blcqi7lXDxFsZKJsR/55Lwf/mLqVdcBMscwkL+9PabsH92grgrWfj4QhWmGx44bc/YnwMkb4EYAotcfXu5kM8A4uS0+lg/Krb0nEo3zTz3xG1eTmRx33oXzf/Cj0KhmKxHH3lSNysKjeW4uL0TmZLLjP/lptX50nuRDEgL16rf+9OSBfzyjhqMkRKl7JbJGaFTzzOtvZ6oKUlAmVjtr/oKHHh2xYJHV3Y3IjkL249Bew9EC9Zif8WM/9m9gD2h+iAhUze58a+tD93HNbeG6YnpFUiKymdffpjePIzPbezJhIlDfMO/7D076/JfsZBKkrCyXaBjuykCGIpuZ8OnPqPXNlGfxS0pUQ68//MPU3p0sECApSt0rO5U46RtX1c07o29NGeScLBOkmHLVDTOW3gwghWkgr5j3UkliL4ZcGbnqySeO+8Sn8ky+SAgMVXW++Lc9v/utFq0udWIN44oV62459/zx/34RZQ8/GgwZAyLKxseee8G8e1boDQ12KomKV0J0+RluAsplbkz8/EU8Wk/OALV/iFALOInuTffeiciQc2SsdBdTVTuVqJ998klXLiUr238yCSIyTpmuurkLFzz4SN20mVas25tZ9IeBfzzt+HL3YchAxu1MqmHm3Pn3/xRIDLxuQcAD62+8cvfjv9Fqakt74A2itO1QU/OpD/48OHZ8zvXJc3vuzHmRzmy4fdm+Pz6pVdcQeWLJYiC8XZ1jkBBJ5MoJX7kctQBlk8D6+QYTEWp6YsurRlfn6LM+WvIdg4wJwzj+wi8Hx08qWE4Pci6RkeEBbdZt9wSbx2z76UM8qOOQlMcvDfh/w8UC5Softpxz/vTr78z3qg69Cb3Iih/FLzUM9I4RpE2mkX8ryDseRASIqEd2/3blaw/dJ+0868BlpjI8tcIgStMKjWyafPFl4Ay8bZkIDjmnllHUk6UsMuEmn3VBRFUrqrnc7bk/yGn59KUHn/1b2+oX1FDYmxkmHi5xNxiQMTubnfYfS/XmCZTp6jdBnYhQ0+zuLsjVCy/4iyMQkRIsLu2GyE4mSErs11QM3nyQEGYisfd/f9u57hVFL//hugMxHCwQcm4nE6MWnTH2458iI96/eoSDobo3Hn9k64r7ua4XY1SQMSeVnLH05pFnnl1gTOTcyaRf/vY3MvvfxKFajpXSTsTtVEoJh0vrpbmj8gWEKG1bq66duvjqXILwu6fuJBwM1bb/46kNd98KAJhgxSx5IeN2MibMoiq5ApHZ2Zltbxuq9XwEQEVRo1UeOZlwILx16O4RgIzbyUTr4m+HJ06lTD+xExIOhqoSm9etvfEaZMg0redM1iKezFSt+B2PqCpMVZg6dDMmApJlPlO3IJU6jc/tgmEKt2Kx5vd9cNy5nyMjjvxw35mEwGDEeGvfK9ctttNJRQ9KIYottkM0KL+Vcvd7uCBmKajUSDT1FDw0QqPHti5ZBiQQ6LCxhqRAPWh1dqz+j6+n9r3BgyEpJVS6yfUYlSog6DEQcsY1N+ijxpFlHFZvgKRALWjH4quXfC22eaMaiXhhJ/nwo1IFhFyxE7ETvvTVxkUffPcUiYRATXfSydXfvqxrwzq1uuTLpccsFRkHQkWxYrHm931o8iVXkHF4UQsSAvWgk0q9vOTyzjUvq9U1ZB+RKzrYRY6+aQ7HDJVngXLb6asmHT/zulsBCN/p55JwMBQ2Ozpe+uaX219+Qa2qJsfrE5mKpsIEhIxJ21QjVXNu+Z5a30C22ffAlNyMPbN394uXX9S5fq1a5Y9cJaeiBIRIUkopZ990R9WUmZRJ9i0IR46Dobr4lg3/vOyi+I7tanW19NVTeionDoSIiHYqOeOam0ac8eF3LHgRERGG69qf/8uaG6+24nElEpGOA669Ed8FKkjFLGUgMiseO+myb7ac/8W+9bxyhehQC+385Y82/9ddAEwJBit95ELGSFaGFCtjKQO5YnV3Trrg4slf/RYZb9eoI+GgHpK2vfG2pTsf+4UajiBjQ7d4VKZpGKKTSXE9iMi8mcLRlwrwgZBzq7tzwnmfab1qGZm99byIcsXesgfeevGbl+z8zaNaVXXOSSp3f92BSLY9csFpiChsE/tLqvQUXhcQcsXs7mo59/wZS28n20KiHpUgw1DNgWeeeu6Sz7SvflGrrSUhPJv3WSTIFTuZHLnw9Pn3PTLrxjsUPehkM/mLb5YdDwcSEZBxs7tzwrnnz7z+DhAWkgBkJBwMRWTW2Pr9m3f8ciVwRY1EySmB03MEw5GLESx3Fmd0XMv0a78Ddrbp/R8LNY9ds+yq5M4darV3o1letUCIiMyKdU/67Bdn3vBdcmyQImdfMFSffH3LPy+78PWVK5ge5N4ol+yWXrM6a9ktgcYmsk3KxKtPmnbqQ4+OXLDI6u7yWoH6Q3ixOkfu8BEzET/hkq9Pu+ZmsE2QgiRhMAyc73h0+T++/PnOf61Ta+uISEpZ8v4Uh6smGLOSySmXXlE37z25pT3knDKpQF39/HtXTPj058xYrOeTKffbOezy3PiKnEvblrY1fcnSiRd8lYwkCIGqClo0tvGVTT+4q+2l55VwRAlHPGvVBwtybiVio99/1qQLv9o3JTe36xk5n7HsjvDosZvu/z7TNKYonpooeEtAyLmTzSp6YM5N328+6xyZ7kLGMFwjMvFtP757+89/4mQzWk0tSenxRM/iQcaEkY2MmzDj2u+AFPjOlNyeAvVGctJFV4SaRq+7dakwTa7r3hm1PSQgpihWPB4eM27uLXfXzpovk+0sWg0AB1b9ceuP7u/euEGNRnuKsAwbel2f2UtvDjQ2USbRT+o+IgJSprv5Q+fqI0a+ct23su1tajjikYUabwgIERGNrs5Rp54++4bv6k1NYKVZtCG+ee3Whx848OzTgOxww3MUPMrBFjDM3T+YH0HGrFj3tMVX188/s9+E7rfv5JwyXXWzF5y6/JHV374itu01zRtTMw8ICFE6trSsyRdcPOXyJTwUAmBG94Htj9y1+3ePOemUGq0CgMMMj7QsICrpdk1kXJpm8Q6HtCxpmrmz3ov6AcacdHrMBz/S4/oUihkiVygTD0847tTlK1++dnHbS//UqmvK7g/h7xceV9b2kRxHjURbF1895qOfASCrbc/uJx7f9fivMvvfVKNRZLyvu4OIwrLCo8dMX7IMFQVkSTWEJJyqiccH6htB5K1dj0jCiW3ZJAwDii4PhYBSOLUntSrRahiokMi7ICEwoAvDWLP0W/uf+asarSrzYSu/X1A+AfWeQ3D6ikcjk+eYbTv3/P7x3Y//JvXGHiUU4lqAhHz3PJqImKK+9xePB8dNBpkt8dFrCJbZW6Mzv11B1PXeWumDeD6ZBghnMD+IJAWqGgaCqxd/Zf+zTyvhSL4jHEpMWdM5iIBzO5Xc/cRjwdEv7fj5T1Jv7OHBUM7dGchJREUxY11tq18YP64VmCjxKEwQ0DFQpJXLyX1QJpFQ1we78zl32Epm365sexvwMh+Xg0+W0QLlIBKGQUKwQKDnBLW8nwgy5hjZupOmjTzjA0N7OEvFIGWm7eDB5581OtqVUJm3zXtAQLloB2LxdTAAUZqmk017tuhJiUHkTAmGmKKWPd/DA7MwgEF/h4h4IMBDocH5G8MKIinLrh7wiICOACICD0RBfLy6Gu9TIVSqBepLjwtVcRCVPQzoHqXCk/gAEO1kUjrOEJ92WEqwJ5qlKOFIpWdRVrgFQiDHbj7jfYHGkSCcipmTEQBXzPaDB198DhUPJ4UWQWXsyhgIROaYxomXfK1m+iIAs3JcOgkQiG14bv+zf1VVT5/PWpAKt0CQ2wSTATAom8xfw9s7kJQYjDqZTEW6bu9kOAhIZLN2KklGqvhCzOWFSKIAkc0OAwHhE6dMKHcf3EHEQyGWq+VeKa+DABClcETlG6HhYIGcdLoi5zKIlTLm5qFyiivkgfNK/BZT8alnHqbyLRAMi/dQsVR2EMKn7FT8GOxTXnwB+biisiPRPmXHt0A+rvAF5OOKYREH8ikfvgXycYUvIB9X+IFEH1f4FsjHFb6AfFzhC8jHFf403scV/lKGjyv8IczHFb6AfFzhC8jHFX4g0ccVvgXycYU/jfdxhW+BfFzhC8jHFb6AfFzhR6J9XOFbIB9X+HEgH1f4FsjHFX4cyMcVvgXycYUvIB9X+ALycYUvIB9X+ALycYUvIB9X/H/1WQQ0WN6LGAAAAABJRU5ErkJggg==">
+<meta name="apple-mobile-web-app-title" content="每日信息差">
+<style>
+:root{
+  --paper:#f4efe3;
+  --card:#fffdf7;
+  --ink:#211e1a;
+  --muted:#7c7264;
+  --line:#e7ddc9;
+  --red:#c0452b;
+  --green:#275f53;
+  --gold:#e9c86b;
+  --serif:"Noto Serif SC","Noto Serif CJK SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;height:100%}
+body{
+  background:#e9e1d1;
+  overflow-x:hidden;
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+  overscroll-behavior:none;
+}
+button{font-family:inherit}
+
+.app{
+  position:relative;
+  width:100%;
+  max-width:480px;
+  height:100dvh;
+  margin:0 auto;
+  background:var(--paper);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  box-shadow:0 0 90px rgba(60,40,15,.16);
+}
+.app::before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    radial-gradient(700px 380px at 78% -8%,rgba(255,255,255,.85),transparent 62%),
+    radial-gradient(520px 320px at 6% 4%,rgba(233,200,107,.16),transparent 60%);
+  pointer-events:none;
+}
+
+/* ---------- 顶栏 ---------- */
+.topbar{
+  position:relative;z-index:5;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:calc(16px + env(safe-area-inset-top)) 20px 8px;
+  flex:0 0 auto;
+}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{
+  width:34px;height:34px;border-radius:11px;
+  background:var(--red);color:#fff8ec;
+  font-family:var(--serif);font-size:18px;font-weight:400;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 14px -8px rgba(192,69,43,.9);
+  transform:rotate(-3deg);
+}
+.brand-txt{display:flex;flex-direction:column;line-height:1.15}
+.brand-txt b{font-family:var(--serif);font-size:16px;letter-spacing:.06em;font-weight:400}
+.brand-txt i{font-style:normal;font-size:8.5px;letter-spacing:.19em;color:#a89b86;margin-top:3px}
+.ghost-btn{
+  border:1px solid var(--line);background:rgba(255,253,247,.7);
+  color:var(--muted);font-size:12px;letter-spacing:.08em;
+  padding:7px 13px;border-radius:99px;cursor:pointer;transition:.18s;
+}
+.ghost-btn:active{transform:scale(.96)}
+
+/* ---------- 主体 ---------- */
+.main{
+  position:relative;z-index:2;
+  flex:1 1 auto;overflow-y:auto;overflow-x:hidden;
+  padding:6px 18px calc(158px + env(safe-area-inset-bottom));
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.main::-webkit-scrollbar{display:none}
+
+.dayline{display:flex;align-items:flex-end;justify-content:space-between;margin:6px 2px 14px}
+.dayline .d1{font-family:var(--serif);font-size:19px;letter-spacing:.02em}
+.dayline .d2{font-size:10px;letter-spacing:.2em;color:#a89b86;margin-top:4px;text-transform:uppercase}
+.streak{
+  display:flex;align-items:center;gap:5px;
+  font-size:11px;color:var(--red);
+  background:rgba(192,69,43,.08);border:1px solid rgba(192,69,43,.16);
+  padding:5px 10px;border-radius:99px;letter-spacing:.04em;
+}
+.streak b{font-family:var(--serif);font-size:13px}
+
+/* ---------- 今日卡片 ---------- */
+.card{
+  position:relative;
+  background:var(--card);
+  border:1px solid #efe6d5;
+  border-radius:26px;
+  padding:20px 20px 22px;
+  box-shadow:0 26px 46px -30px rgba(74,52,24,.6),0 2px 6px rgba(74,52,24,.05);
+}
+.card::before{
+  content:"";position:absolute;top:-1px;left:26px;right:26px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(192,69,43,.4),transparent);
+}
+.card.enter{animation:cardIn .34s cubic-bezier(.22,.8,.3,1) both}
+@keyframes cardIn{
+  from{opacity:0;transform:translateY(14px) scale(.99)}
+  to{opacity:1;transform:none}
+}
+
+.ctop{display:flex;align-items:center;gap:7px;margin-bottom:15px}
+.no{font-family:var(--serif);font-size:11.5px;letter-spacing:.1em;color:var(--red);font-weight:400}
+.chip{
+  font-size:10.5px;letter-spacing:.05em;color:#8a7f6e;
+  border:1px solid var(--line);border-radius:99px;padding:3px 8px;
+  background:#fdfaf3;
+}
+.chip.cat{color:var(--green);border-color:rgba(39,95,83,.22);background:rgba(39,95,83,.05)}
+
+.icon-btn{
+  background:none;border:0;padding:5px;margin-right:-2px;color:#c0b4a0;
+  cursor:pointer;line-height:0;transition:.18s;
+}
+.icon-btn.first{margin-left:auto}
+.icon-btn svg{width:18px;height:18px}
+.icon-btn:active{transform:rotate(-40deg)}
+
+.fav{
+  background:none;border:0;padding:5px;margin-right:-5px;
+  color:#c9bda9;cursor:pointer;line-height:0;transition:.18s;
+}
+.fav svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6}
+.fav.on{color:var(--red)}
+.fav.on svg{fill:var(--red);stroke:var(--red)}
+.fav:active{transform:scale(.86)}
+
+.card h1{
+  font-family:var(--serif);
+  font-size:clamp(22px,6.1vw,27px);
+  line-height:1.46;
+  font-weight:400;
+  letter-spacing:.005em;
+  margin:0 0 13px;
+}
+.hook{
+  font-size:14px;line-height:1.8;color:var(--muted);
+  margin:0 0 18px;padding-left:12px;
+  border-left:2px solid var(--line);
+}
+
+.blk{margin-bottom:15px}
+.blk h4{
+  font-size:10px;letter-spacing:.2em;color:#a08a5e;font-weight:700;
+  margin:0 0 7px;display:flex;align-items:center;gap:6px;
+}
+.blk h4::before{
+  content:"";width:5px;height:5px;background:currentColor;
+  border-radius:1px;transform:rotate(45deg);flex:0 0 auto;
+}
+.blk p{font-size:15px;line-height:1.88;margin:0;color:#3c372e}
+
+.kid{background:#fbf3dc;padding:14px 15px;border-radius:15px}
+.kid h4{color:#a1802c}
+
+.why{padding-top:15px;border-top:1px dashed var(--line)}
+
+.use{
+  background:linear-gradient(155deg,#2e7161,#1d4f45);
+  color:#eef3ec;padding:16px;border-radius:17px;margin-bottom:0;
+  box-shadow:0 14px 26px -20px rgba(29,79,69,.9);
+}
+.use h4{color:#a5d3c6}
+.use p{color:#e8f0e9}
+
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 0}
+.tag{font-size:10px;color:#a39889;letter-spacing:.03em}
+
+/* ---------- 操作区 ---------- */
+.acts{display:flex;gap:10px;margin-top:16px}
+.btn{
+  flex:1;height:50px;border-radius:16px;border:1px solid var(--line);
+  background:rgba(255,253,247,.9);color:var(--ink);
+  font-size:14px;font-weight:600;letter-spacing:.03em;
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  cursor:pointer;transition:transform .15s,background .15s;
+}
+.btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.btn.primary{background:var(--ink);color:#f7f2e6;border-color:var(--ink);flex:1.35}
+.btn:active{transform:scale(.976)}
+
+.hint{
+  text-align:center;font-size:11px;color:#a89b86;
+  margin:18px 0 0;letter-spacing:.03em;line-height:1.7;
+}
+
+/* ---------- 原理馆 ---------- */
+.sec-hd{font-family:var(--serif);font-size:22px;margin:12px 2px 6px;letter-spacing:.01em}
+.sec-sub{font-size:12.5px;color:var(--muted);line-height:1.75;margin:0 2px 18px}
+
+.lab-item{
+  display:flex;gap:13px;align-items:flex-start;
+  padding:15px 15px 16px;background:var(--card);
+  border:1px solid #efe6d5;border-radius:18px;margin-bottom:10px;
+  cursor:pointer;transition:transform .16s,box-shadow .16s;
+  box-shadow:0 8px 20px -20px rgba(74,52,24,.7);
+}
+.lab-item:active{transform:scale(.988)}
+.lab-em{font-size:23px;line-height:1.15;flex:0 0 auto}
+.lab-item h3{font-family:var(--serif);font-size:16.5px;line-height:1.5;margin:0 0 5px;font-weight:400}
+.lab-item p{margin:0;font-size:12px;color:var(--muted);line-height:1.65}
+.lab-go{
+  margin-left:auto;align-self:center;color:#c9bda9;font-size:16px;
+  flex:0 0 auto;padding-left:4px;
+}
+
+/* ---------- 我的 ---------- */
+.me-card{
+  background:var(--card);border:1px solid #efe6d5;border-radius:20px;
+  padding:16px 17px;margin-bottom:12px;
+  box-shadow:0 10px 26px -26px rgba(74,52,24,.8);
+}
+.me-card h3{
+  font-family:var(--serif);font-size:14px;margin:0 0 4px;
+  letter-spacing:.04em;display:flex;align-items:center;gap:7px;
+}
+.me-card h3 span{font-size:14px}
+.me-note{font-size:11.5px;color:#a39889;line-height:1.7;margin:0 0 10px}
+
+.row{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid #f2ead9}
+.row:last-child{border-bottom:0;padding-bottom:2px}
+.row .lbl{font-size:13.5px;flex:1 1 auto;padding-right:12px;min-width:0}
+.row .lbl small{display:block;font-size:10.5px;color:#a89b86;margin-top:3px;line-height:1.5}
+.row .val{font-size:13px;color:var(--muted);font-family:var(--serif);flex:0 0 auto;white-space:nowrap}
+
+.sw{
+  width:46px;height:27px;border-radius:99px;background:#ddd2be;
+  position:relative;transition:background .24s;border:0;cursor:pointer;flex:0 0 auto;
+}
+.sw::after{
+  content:"";position:absolute;width:21px;height:21px;border-radius:50%;
+  background:#fff;top:3px;left:3px;transition:transform .24s;
+  box-shadow:0 1px 3px rgba(0,0,0,.22);
+}
+.sw.on{background:var(--red)}
+.sw.on::after{transform:translateX(19px)}
+
+input[type=time]{
+  width:120px;
+  border:1px solid var(--line);background:#fffdf7;border-radius:10px;
+  padding:6px 10px;font-size:14px;font-family:var(--serif);color:var(--ink);
+  outline:none;
+}
+
+.stats{display:flex;gap:9px;margin-bottom:12px}
+.stat{
+  flex:1;background:var(--card);border:1px solid #efe6d5;border-radius:17px;
+  padding:14px 8px 12px;text-align:center;
+}
+.stat b{display:block;font-family:var(--serif);font-size:22px;line-height:1.2;color:var(--red)}
+.stat span{font-size:10px;color:#a89b86;letter-spacing:.06em}
+
+.mini-fav{
+  display:flex;align-items:center;gap:10px;padding:10px 0;
+  border-bottom:1px solid #f2ead9;cursor:pointer;
+}
+.mini-fav:last-child{border-bottom:0;padding-bottom:2px}
+.mini-fav .em{font-size:17px}
+.mini-fav .tx{font-size:12.5px;line-height:1.5;flex:1;color:#433d34}
+.mini-fav .ar{color:#c9bda9;font-size:14px}
+
+.empty{font-size:12px;color:#b0a596;padding:14px 0 16px;text-align:center;line-height:1.8}
+
+/* ---------- 底部导航 ---------- */
+.fade{
+  position:absolute;left:0;right:0;bottom:0;height:126px;z-index:15;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(244,239,227,0) 0%,rgba(244,239,227,.72) 44%,var(--paper) 82%);
+}
+
+.tabbar{
+  position:absolute;z-index:20;
+  left:14px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));
+  height:62px;display:flex;
+  background:rgba(255,253,247,.92);
+  backdrop-filter:blur(22px) saturate(1.5);
+  -webkit-backdrop-filter:blur(22px) saturate(1.5);
+  border:1px solid rgba(231,221,201,.9);
+  border-radius:22px;
+  box-shadow:0 18px 32px -20px rgba(74,52,24,.55);
+  padding:6px;
+}
+.tabbar button{
+  flex:1;background:none;border:0;border-radius:17px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  color:#a89b86;font-size:10px;letter-spacing:.06em;cursor:pointer;transition:.2s;
+}
+.tabbar svg{
+  width:20px;height:20px;fill:none;stroke:currentColor;
+  stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;
+}
+.tabbar svg .fill{fill:currentColor;stroke:none}
+.tabbar button.on{color:var(--red);background:rgba(192,69,43,.07)}
+
+/* ---------- 详情面板 ---------- */
+.sheet{position:fixed;inset:0;z-index:50;pointer-events:none;overflow:hidden}
+.sheet-mask{position:absolute;inset:0;background:rgba(28,23,16,.45);opacity:0;transition:opacity .3s}
+.sheet-body{
+  position:absolute;left:0;right:0;bottom:0;margin:0 auto;
+  transform:translateY(100%);
+  width:100%;max-width:480px;max-height:90dvh;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  background:var(--paper);
+  border-radius:26px 26px 0 0;
+  padding:0 22px calc(34px + env(safe-area-inset-bottom));
+  transition:transform .34s cubic-bezier(.22,.8,.3,1);
+  scrollbar-width:none;
+}
+.sheet-body::-webkit-scrollbar{display:none}
+.sheet.on{pointer-events:auto}
+.sheet.on .sheet-mask{opacity:1}
+.sheet.on .sheet-body{transform:translateY(0)}
+
+.sd-top{
+  position:sticky;top:0;z-index:2;
+  background:linear-gradient(var(--paper) 76%,rgba(244,239,227,0));
+  padding:10px 0 6px;
+}
+.grab{width:38px;height:4px;border-radius:99px;background:#d9cfbb;margin:0 auto}
+.sd-em{font-size:38px;line-height:1;margin:18px 0 10px}
+.sd-title{font-family:var(--serif);font-size:23px;line-height:1.45;margin:0 0 11px;font-weight:400}
+.sd-one{font-size:14px;line-height:1.85;color:#5b5245;margin:0}
+
+.steps{margin:24px 0 4px;border-left:1.5px solid #e2d6bd;padding-left:19px}
+.step{position:relative;margin-bottom:19px}
+.step::before{
+  content:"";position:absolute;left:-25px;top:5px;width:9px;height:9px;border-radius:50%;
+  background:var(--red);box-shadow:0 0 0 4px var(--paper);
+}
+.step b{display:block;font-size:12.5px;letter-spacing:.02em;margin-bottom:5px;color:var(--red);font-weight:700}
+.step p{margin:0;font-size:13.8px;line-height:1.85;color:#433d34}
+
+.money{
+  background:#fbf3dc;border-radius:16px;padding:15px 16px;margin:18px 0;
+  font-size:13.4px;line-height:1.9;color:#5a4b25;
+}
+.money b{display:block;font-size:10px;letter-spacing:.2em;color:#a1802c;margin-bottom:7px}
+
+.remember{
+  border-left:3px solid var(--red);padding:1px 0 1px 14px;
+  font-family:var(--serif);font-size:15px;line-height:1.85;color:#3a352d;margin:20px 0 6px;
+}
+.sd-close{
+  width:100%;height:48px;border-radius:15px;border:1px solid var(--line);
+  background:rgba(255,253,247,.9);color:var(--muted);font-size:13px;
+  margin-top:20px;cursor:pointer;
+}
+
+/* ---------- toast ---------- */
+.toast{
+  position:fixed;left:50%;bottom:calc(94px + env(safe-area-inset-bottom));
+  transform:translate(-50%,18px);
+  background:rgba(33,30,26,.94);color:#f7f2e6;
+  font-size:12.5px;line-height:1.5;padding:11px 18px;border-radius:99px;
+  opacity:0;transition:.26s;pointer-events:none;z-index:99;
+  max-width:78%;text-align:center;
+  box-shadow:0 12px 26px -14px rgba(0,0,0,.6);
+}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- 桌面 ---------- */
+@media (min-width:560px){
+  body{padding:0}
+  .app{height:100dvh}
+}
+
+/* ---------- 信息流 ---------- */
+.filters{
+  display:flex;gap:7px;overflow-x:auto;
+  margin:0 -18px 14px;padding:0 18px 2px;
+  scrollbar-width:none;
+}
+.filters::-webkit-scrollbar{display:none}
+.filter{
+  flex:0 0 auto;border:1px solid var(--line);background:rgba(255,253,247,.8);
+  color:#8a7f6e;font-size:12px;padding:6px 12px;border-radius:99px;
+  cursor:pointer;white-space:nowrap;transition:.16s;
+}
+.filter.on{background:var(--ink);color:#f7f2e6;border-color:var(--ink)}
+
+.feed-item{
+  background:var(--card);border:1px solid #efe6d5;border-radius:16px;
+  padding:14px 15px;margin-bottom:9px;cursor:pointer;transition:transform .15s;
+  box-shadow:0 8px 20px -22px rgba(74,52,24,.8);
+}
+.feed-item:active{transform:scale(.988)}
+.fi-top{display:flex;align-items:center;gap:6px;margin-bottom:7px}
+.fi-src{font-size:11px;color:var(--green);font-weight:600;letter-spacing:.03em}
+.fi-cat{font-size:10px;color:#a89b86;border-left:1px solid var(--line);padding-left:6px}
+.fi-ai{font-size:9px;color:#a1802c;background:#fbf3dc;padding:2px 6px;border-radius:99px}
+.fi-lang{font-size:9px;color:#9a8f7d;border:1px solid var(--line);padding:2px 5px;border-radius:99px}
+.fi-time{margin-left:auto;font-size:10px;color:#b0a596;font-variant-numeric:tabular-nums}
+.feed-item h3{
+  font-family:var(--serif);font-size:15.5px;line-height:1.55;
+  margin:0 0 5px;font-weight:400;letter-spacing:.005em;
+}
+.feed-item p{
+  margin:0;font-size:12px;line-height:1.68;color:var(--muted);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+
+a.src-link{text-decoration:none;display:block;transition:.18s}
+a.src-link:active{transform:scale(.99)}
+.src-link .go{float:right;opacity:.75;font-size:14px}
+
+.sd-origin{font-size:11.5px;color:#a39889;margin:0 0 10px;line-height:1.6}
+.sd-link{
+  display:flex;align-items:center;justify-content:center;height:48px;
+  border-radius:15px;background:var(--ink);color:#f7f2e6;
+  text-decoration:none;font-size:14px;margin-top:12px;letter-spacing:.03em;
+}
+
+.feed-hd{display:flex;align-items:center;justify-content:space-between}
+.feed-hd .sec-hd{margin-bottom:4px}
+
+/* 手机扫码卡片 */
+.qr-wrap{display:flex;justify-content:center;padding:6px 0 10px}
+.qr-wrap img{width:170px;height:170px;border-radius:14px;border:1px solid var(--line);background:#fff;padding:8px}
+.qr-url{
+  text-align:center;font-family:var(--serif);font-size:13px;color:var(--green);
+  letter-spacing:.02em;word-break:break-all;
+}
+
+.offline-tag{
+  font-size:10.5px;color:#a89b86;letter-spacing:.08em;
+  border:1px solid var(--line);border-radius:99px;padding:4px 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="app" id="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">差</span>
+      <span class="brand-txt">
+        <b>每日信息差</b>
+        <i>WORLD, IN PLAIN WORDS</i>
+      </span>
+    </div>
+    <button class="ghost-btn" id="btnToday" title="回到今天">今天</button>
+  </header>
+
+  <main id="main" class="main"></main>
+
+  <div class="fade"></div>
+
+  <nav class="tabbar" id="tabbar">
+    <button data-view="today" class="on">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="3" class="fill"/></svg>
+      <span>今天</span>
+    </button>
+    <button data-view="feed">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h9"/><circle cx="19" cy="17.5" r="1.4" class="fill"/></svg>
+      <span>信息流</span>
+    </button>
+    <button data-view="lab">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 14.6 9l6.2.6-4.7 4.1 1.4 6.1L12 16.6 6.5 19.8l1.4-6.1L3.2 9.6 9.4 9z"/></svg>
+      <span>原理馆</span>
+    </button>
+    <button data-view="me">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.4" r="3.6"/><path d="M4.8 20.2c.8-3.9 3.8-6 7.2-6s6.4 2.1 7.2 6"/></svg>
+      <span>我的</span>
+    </button>
+  </nav>
+
+</div>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <div class="sheet-mask" data-close></div>
+  <div class="sheet-body" id="sheetBody"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ==========================================================
+   内容库 · 每天一条「信息差」 + 行业原理「说人话」
+   每个条目都按同一套结构写，方便卡片渲染
+   ========================================================== */
+
+window.DAILY = [
+  {
+    id: "jp-fruit", em: "🍈", region: "日本", cat: "消费",
+    title: "在日本，水果常常不是拿来吃的，是拿来送的",
+    hook: "超市里一个哈密瓜标价 150 元人民币，包装得像首饰盒。买它的人，多半不是自己吃。",
+    kid: "你可以把日本的水果想象成「会说话的礼物」。就像同学过生日，你不会送他一包薯片，你会送一个包装好的东西。在日本，水果就负责这件事——它要好看、要完美、要有盒子，因为它的工作不是填饱肚子，而是替人说「谢谢」和「抱歉」。",
+    why: "同一颗水果，在中国被放进「日常食物」的盒子，大家比价格；在日本被放进「礼品」的盒子，大家比品相和产地。盒子不一样，价格逻辑就完全不一样。所以日本超市里既有便宜的香蕉，也有一颗上千元的葡萄——它们根本不是同一类商品。",
+    use: "以后再看到「某地某物贵得离谱」的新闻，先别急着笑。问一句：这东西在当地，是拿来用的，还是拿来送人的？这个思路可以直接套在月饼、白酒、球鞋、咖啡上。",
+    tags: ["礼品经济", "消费习惯"]
+  },
+  {
+    id: "nl-bike", em: "🚲", region: "荷兰", cat: "城市",
+    title: "荷兰的自行车，比这个国家的人还多",
+    hook: "1700 多万人，却有 2300 多万辆自行车。阿姆斯特丹的停车楼是给自行车盖的，不是给汽车盖的。",
+    kid: "想象你们学校每人有 1.3 辆自行车，操场边上盖了一栋四层楼专门停车——这就是荷兰。因为他们的城市又平又小，从家到公司骑车 15 分钟，比开车找车位还快。",
+    why: "这不是「荷兰人更爱环保」，而是城市被设计成骑车更划算：路窄、停车贵、油价高、自行车道有独立信号灯、火车上能推自行车。当一件事的基础设施足够好，它就从「美德」变成了「省事」。",
+    use: "判断一个城市适不适合做某件事，别听口号，看基础设施：有没有专用道、能不能带上地铁、丢了能不能找回来。反过来，如果你想养成一个习惯，先别靠意志力，先把「做这件事的摩擦」降到最低。",
+    tags: ["城市设计", "基础设施"]
+  },
+  {
+    id: "de-sunday", em: "🛒", region: "德国", cat: "规则",
+    title: "德国的星期天，整条街的商店都关着门",
+    hook: "周日下午你想买瓶水，会发现超市、药店、服装店全关门。街上安安静静，像放了一天假的城市。",
+    kid: "德国有一部法律叫《商店关门法》，大意是：星期天是休息日，商店也应该休息。所以星期天开店是例外，要特别申请。你可以理解成——这个国家把「大家一起休息」当成一件必须被保护的事。",
+    why: "在很多国家，便利是最高优先级，谁开门谁赚钱。在德国，休息权被排在便利前面。结果是：生活没那么方便，但商场员工、送货司机也能在同一个下午陪孩子。没有哪个更好，只是把不同的东西放到了第一位。",
+    use: "看到一件「不方便」的事，别急着说落后。先找找它在保护什么。很多看起来低效的规则，背后都有一群人在被保护。",
+    tags: ["劳工制度", "社会规则"]
+  },
+  {
+    id: "us-tip", em: "💵", region: "美国", cat: "消费",
+    title: "在美国，小费不是「看你心情」，是「工资的一部分」",
+    hook: "在餐厅吃饭，账单 100 美元，你要再放 18 美元在桌上。不给，服务员会追出来。",
+    kid: "美国有个特殊的规矩：餐厅可以只给服务员很低的底薪（有些州低到每小时 2 美元多），剩下的靠客人给小费。所以小费不是奖励，是他工资的大头。你不给，等于让人白干。",
+    why: "在中国，服务费已经含在菜价里，服务员拿固定工资，小费是额外的。在美国，这部分钱被「藏」在了小费里，由客人现场支付。同一顿饭，一个把服务费写进价格，一个把它拆出来让你当面掏——感受完全不同。",
+    use: "出国前先查一件事：这个地方的服务费是含在价格里，还是要另外给？餐厅、出租车、理发、酒店行李员，规则都不一样。搞错会被认为很不礼貌，而不是「省钱」。",
+    tags: ["小费文化", "工资结构"]
+  },
+  {
+    id: "ke-mpesa", em: "📱", region: "肯尼亚", cat: "金融",
+    title: "在肯尼亚，很多人没有银行卡，但人人都在手机上转账",
+    hook: "一个卖菜的大姐，手机是老年机，但她能收钱、存钱、给远方的儿子汇钱。她一辈子没进过银行。",
+    kid: "有个东西叫 M-Pesa，2007 年出现的。你可以把它想成「话费版的支付宝」：钱存在手机号里，去街角小卖部给老板现金，老板用手机给你「充」进去；要花的时候，把手机上的数字转给对方，对方去小卖部换现金。整条街的小卖部，就是他们的银行网点。",
+    why: "大部分非洲国家银行网点很少、开卡要地址证明、穷人根本办不下来。但手机卡几乎人人都有。于是钱干脆绕开了银行，直接在手机号之间跑。现在肯尼亚的移动支付规模，比很多发达国家的信用卡还大。",
+    use: "这件事的真正启发是：一项技术要普及，不一定要先有「标准条件」。哪里有痛点，哪里就会长出替代方案。做产品、做小生意都一样——别抱怨用户没有你要的条件，看看他手上已经有什么。",
+    tags: ["移动支付", "普惠金融"]
+  },
+  {
+    id: "in-upi", em: "🔳", region: "印度", cat: "金融",
+    title: "在印度，连卖菜的小摊都挂着一张收款二维码",
+    hook: "一个没有收银机的路边摊，纸板上印着二维码。买一根黄瓜，也可以扫码付钱，而且不收手续费。",
+    kid: "印度建了一套全国统一的支付系统，叫 UPI。所有银行、所有支付 App 都接进这一张「网」。所以不管你用哪个 App，扫的码都能通。它像什么呢——像全国统一了插座，你买任何电器都能插。",
+    why: "中国的扫码支付是几家公司在竞争，各扫各的码；印度是国家出面修了一条「公共马路」，谁都能上来跑，而且对小商户免费。结果 2023 年一个月就有超过 100 亿笔交易。同一件事，一个靠公司推，一个靠公共设施推，扩散速度完全不同。",
+    use: "看一个国家的数字化程度，别看大城市写字楼，看最边缘的交易——菜市场、三轮车、寺庙功德箱。能覆盖到那里，才叫真的普及。",
+    tags: ["公共基础设施", "普惠"]
+  },
+  {
+    id: "br-pix", em: "⚡", region: "巴西", cat: "金融",
+    title: "在巴西，转账像发微信一样，几秒钟就到，还免费",
+    hook: "2020 年巴西央行做了个叫 Pix 的东西，现在超过七成成年人都在用。周日凌晨转账，也是立刻到账。",
+    kid: "你可以把 Pix 想成「给钱发了一条消息」：你只需要知道对方的手机号、身份证号或者一个随机码，输入金额，一秒到账。不用问银行账号，不用等工作日，不用付手续费。",
+    why: "在 Pix 之前，巴西转账要填一堆银行信息，还要等工作日结算，很多人干脆用现金。Pix 把这些麻烦全砍掉之后，现金的使用量明显下降，连小摊贩都开始只收 Pix。它不是发明了新东西，是把「转账这件事的摩擦」降到了接近零。",
+    use: "任何一件「大家知道该做但懒得做」的事，只要摩擦降一半，使用量会翻好几倍。你想让别人多用你的东西，先去数一数他要按几次、填几栏、等几天。",
+    tags: ["即时支付", "摩擦成本"]
+  },
+  {
+    id: "se-cashless", em: "💳", region: "瑞典", cat: "社会",
+    title: "瑞典很多人身上一分现金都没有，连教堂都装了刷卡机",
+    hook: "买一杯咖啡刷卡，上厕所刷卡，捐给街头艺人也刷卡。有些店门口直接贴着「不收现金」。",
+    kid: "想象你出门只带手机，钱都在手机里。公交车不收现金，很多店找不开零钱，大家也就慢慢不带钱包了。这叫「现金的消失」，不是被禁止，是被习惯了。",
+    why: "瑞典的银行卡和移动支付太方便，商家收现金反而要付清点、押运、被抢的成本。于是现金一点点被挤出去。但有意思的是：最近瑞典政府又开始提醒大家「家里留点现金」，因为一旦断网或者被攻击，全社会的支付会同时停摆。",
+    use: "效率和安全经常是反向的。一个系统越顺滑，它单点故障的代价就越大。想想你自己：如果手机没电、没网、付不了钱，你身上还有没有备用方案？",
+    tags: ["无现金社会", "系统风险"]
+  },
+  {
+    id: "ae-water", em: "💧", region: "迪拜", cat: "资源",
+    title: "在迪拜，水比油贵",
+    hook: "加油站里一升汽油大约 6 块人民币；超市里一瓶 1.5 升的矿泉水，价格常常和这一升油差不多。",
+    kid: "迪拜在沙漠里，地下几乎没有淡水。他们喝的水，是把海水煮开、把盐留下、把水蒸气收回来——这叫「海水淡化」。这个过程要烧很多电。所以在那里的逻辑是：油从地底自己冒出来，水得花钱「造」。",
+    why: "我们习惯认为「水便宜、油贵」，因为在中国大部分地方，水是就近取的。但在沙漠国家，水的成本结构完全不同。所谓常识，其实是你所在环境的统计结果。",
+    use: "遇到「这不合常理」的事，先问：这里的资源禀赋是什么？成本从哪里来？很多商业机会，就藏在一个地方「觉得贵、但其实可以更便宜」的东西里。",
+    tags: ["资源禀赋", "海水淡化"]
+  },
+  {
+    id: "is-geo", em: "♨️", region: "冰岛", cat: "资源",
+    title: "冰岛的暖气，烧的是从地底下抽上来的热水",
+    hook: "冰岛九成的房子靠地热供暖。冬天室内穿短袖，暖气费还比很多欧洲国家便宜。",
+    kid: "冰岛坐在两块大地的裂缝上，地底下是滚烫的岩石。他们打井，把地下水抽上来，热水直接送进城市的管道，暖完房子再用来化雪、养鱼、发电。整个过程基本不用烧煤烧气。",
+    why: "同样是「供暖」，大部分国家是烧燃料把水加热；冰岛是直接把地下现成的热量搬上来。成本结构完全不同——前者跟着油价走，后者前期打井贵、之后几乎只付维护费。",
+    use: "看一个行业的成本，别只看「用什么」，要看「热从哪来、料从哪来」。谁掌握了源头，谁就不怕涨价。",
+    tags: ["地热", "能源结构"]
+  },
+  {
+    id: "sg-hdb", em: "🏢", region: "新加坡", cat: "住房",
+    title: "新加坡八成的人，住在政府盖的房子里",
+    hook: "不是廉租房，是可以买下来的房子。很多人结婚后的第一套房，就是向政府买的。",
+    kid: "新加坡有个机构叫建屋发展局（HDB），它盖了大量房子，用比市场便宜的价格卖给本国公民。你可以理解为：政府当了最大的开发商，但不为了赚钱。买房的钱可以从公积金里出，而公积金是每个月工资自动扣下来的一笔钱。",
+    why: "大部分国家的商品房由开发商定价；新加坡把「住」和「炒」分成了两个市场：大部分人有便宜的房子住，少部分人去买昂贵的私人公寓。房价涨的时候，多数人的居住成本不会跟着飞。",
+    use: "看一个地方的房价，别只看均价，要看「大多数人实际住在哪种房子里」。平均数会骗人，结构不会。",
+    tags: ["组屋", "住房制度"]
+  },
+  {
+    id: "kr-jeonse", em: "🏠", region: "韩国", cat: "住房",
+    title: "在韩国，租房可以不给房东租金，而是先给一大笔押金",
+    hook: "这种叫「全租」：你给房东房价的 50%~80% 当押金，住两年，一分房租不付，搬走时押金全额退还。",
+    kid: "听上去像天上掉馅饼——白住两年？其实房东拿你的押金去银行吃利息、或者再买一套房。你牺牲的是「这笔钱两年的利息」，换来的是「不用付月租」。本质上是你和房东做了一笔借贷生意，只不过抵押物是你自己住的房子。",
+    why: "这套玩法能成立，靠的是利率高、房价一直涨、法律对押金保护强。所以当利率一变，整个模式就摇晃——最近几年韩国利率上升，很多房东还不出押金，「全租」正在快速减少。",
+    use: "任何「看起来双方都赚」的交易，一定有个隐藏的第三方在付钱——通常是利率、房价或者时间。当这三个东西转向，交易就会崩。",
+    tags: ["租赁制度", "利率"]
+  },
+  {
+    id: "it-coffee", em: "☕", region: "意大利", cat: "消费",
+    title: "在意大利，同一杯咖啡，站着喝比坐着喝便宜一半",
+    hook: "吧台边站着喝 1.2 欧，坐下来让服务员端过来，可能 3.5 欧。菜单上写着两个价格。",
+    kid: "意大利的咖啡吧是这样的：你在柜台点单、付钱、站着两口喝完就走。如果你要坐下，就占了一张桌子、占了服务员的时间、占了这个位置一上午——所以要多付钱。你付的不只是咖啡，还有「座位」。",
+    why: "我们习惯「咖啡的价格＝一杯咖啡的价格」。在意大利，价格被拆成了咖啡＋位置＋服务。旅游区更明显：同样的咖啡，靠广场的桌子比巷子里的贵一倍。",
+    use: "看价格，要学会拆。你买的东西往往不止一件：商品＋位置＋时间＋服务。想省钱，就问自己——我能不能把其中一项去掉？",
+    tags: ["价格拆解", "咖啡文化"]
+  },
+  {
+    id: "uk-tv", em: "📺", region: "英国", cat: "规则",
+    title: "在英国，家里有电视就得先买一张「看电视许可证」",
+    hook: "一年 169.5 英镑（约 1500 元人民币）。不买还看，会被上门查，罚款最高 1000 英镑。",
+    kid: "英国广播公司 BBC 不播广告，那它靠什么活？靠每个看电视的家庭交的这笔钱。所以这张许可证不是税，更像是「大家一起凑钱养一个不靠广告的电视台」。",
+    why: "大部分国家的电视台靠广告，谁给钱就替谁说话；BBC 靠观众付费，理论上可以不受广告主影响。代价是：每个家庭都得掏钱，而且不管你看不看 BBC。",
+    use: "看到「免费的媒体」，先找它的钱从哪来。广告主、订阅用户、政府、还是某个金主？谁付钱，谁就影响它说什么。这条规律放之四海皆准。",
+    tags: ["公共媒体", "商业模式"]
+  },
+  {
+    id: "fi-school", em: "🎒", region: "芬兰", cat: "教育",
+    title: "芬兰的小学，几乎不考试，也不排名",
+    hook: "孩子 7 岁才上学，作业很少，老师不给分数，家长也不知道自己孩子在班里排第几。",
+    kid: "想象你们班取消考试，改成「做一个关于水的项目」：去河边取水、查资料、做实验、讲给同学听。老师不打分，只写一段话告诉你哪里做得好。芬兰的小学大致是这样。",
+    why: "芬兰的思路是：小学阶段最重要的不是筛人，而是别让孩子掉队、别让孩子讨厌学习。所以资源先投在「早期支持和老师质量」上——芬兰的老师必须硕士毕业，社会地位很高。",
+    use: "任何一个系统，先看它在「筛人」还是在「养人」。筛人的系统设计考试，养人的系统设计支持。你想让一件事长期变好，就往「养」的那一头加资源。",
+    tags: ["教育制度", "公平"]
+  },
+  {
+    id: "il-drip", em: "🌱", region: "以色列", cat: "农业",
+    title: "以色列在沙漠里种菜，靠的是把水直接送到根上",
+    hook: "一滴水从管子上的小孔，慢慢渗到植物根部。全国九成以上的农田用这种方式浇水。",
+    kid: "普通浇地是「给整块地淋浴」，大部分水蒸发掉或者渗走了。滴灌是「给每棵植物打点滴」：管子铺在根旁边，水一滴一滴渗进去，肥料也一起下去。所以同样一吨水，能多长出好几倍的菜。",
+    why: "以色列一半国土是沙漠，水是按「配额」分配的，贵得离谱。水一贵，人就不得不把每一滴水用到极致。反倒是在水便宜的地方，没人有动力去研究滴灌。",
+    use: "资源便宜的地方容易浪费，资源贵的地方容易创新。如果你想逼自己进步，可以试着给某个「廉价资源」加个价格——比如时间、注意力。",
+    tags: ["滴灌", "稀缺驱动"]
+  },
+  {
+    id: "no-ev", em: "🔌", region: "挪威", cat: "能源",
+    title: "挪威卖的新车，十辆里有九辆是电动的",
+    hook: "2024 年挪威新车销量里，纯电动车占到将近九成。加油站正在变成充电站。",
+    kid: "挪威给电动车开了很多「后门」：免掉很高的购车税、过路费打折、能开公交车道、停车免费。算下来，一辆电动车可能比同款汽油车便宜好几万。再加上挪威的电几乎全是水电，便宜又干净。",
+    why: "很多国家靠「号召大家环保」，挪威靠「让电动车更划算」。人不傻，账算得过来就换。真正让人改变行为的，往往不是道理，是价格。",
+    use: "想推动一件事，别只讲意义，改一改成本结构。想让别人少做 A 多做 B，就让 A 变贵、B 变便宜。",
+    tags: ["电动车", "激励设计"]
+  },
+  {
+    id: "th-711", em: "🏪", region: "泰国", cat: "零售",
+    title: "泰国的 7-11，比公交站还密",
+    hook: "全国一万四千多家，曼谷某些街上走 200 米就能碰见一家。半夜三点也亮着灯。",
+    kid: "在泰国，7-11 不只是买东西的地方：可以交电费、买火车票、寄快递、充话费、买热饭，还能坐着吹空调。它更像街角的「万能小站」。",
+    why: "泰国的传统超市和便利店之间，中间地带很薄；加上天气热、外食多、家庭冰箱小，人们习惯「少量多次」地买。7-11 用密集布点＋冷链鲜食，正好接住了这个习惯。门店密到一定程度后，配送成本反而更低——一辆车能送十家店。",
+    use: "看零售，别看「卖什么」，看「它替消费者省了什么」。省时间、省路、省决策，都是钱。密度本身就是一种壁垒。",
+    tags: ["便利店", "密度经济"]
+  },
+  {
+    id: "vn-coffee", em: "☕", region: "越南", cat: "贸易",
+    title: "越南是世界第二大咖啡出口国，但钱大多不在越南人手里",
+    hook: "你喝的那杯 30 块的咖啡，咖啡豆本身可能只值 2 块。种豆的农民拿到的更少。",
+    kid: "一颗咖啡豆的旅程很长：农民种、采摘、晒干，卖给收购商；收购商卖给出口商；出口商卖给国外的烘焙厂；烘焙厂卖给咖啡店；咖啡店卖给你。每过一道手，就加一次价。农民站在最前面，也离你（付钱的人）最远。",
+    why: "这叫「微笑曲线」：种地和开店两头赚得少，中间的加工、品牌、渠道赚得多。越南产量巨大，但大多是未烘焙的原料豆，没有品牌，只能按国际期货价卖——价格别人定，自己说了不算。",
+    use: "看一门生意赚不赚钱，先看它站在链条的哪一段。离「原料」越近越辛苦，离「用户」越近越赚钱。想多赚，就往上走一步：加工、品牌、渠道，任选一个。",
+    tags: ["价值链", "微笑曲线"]
+  },
+  {
+    id: "ch-trash", em: "🗑️", region: "瑞士", cat: "环保",
+    title: "在瑞士，扔垃圾要买指定的袋子，一个好几块",
+    hook: "超市里卖的官方垃圾袋，一个折合人民币十几块。用普通袋子扔垃圾，会被翻出来罚款。",
+    kid: "瑞士的逻辑是：扔垃圾要付钱，而且扔得越多付得越多。因为处理垃圾真的要花钱——焚烧、填埋、分类、运输。这笔钱没有藏在税收里，而是直接贴在你买垃圾袋的那一刻。",
+    why: "大部分地方，垃圾费混在物业费或税收里，你扔多少都没感觉。瑞士把它变成「按量付费」，人立刻就会做三件事：少买包装、认真分类、把能修的修好。价格一出现，行为就变了。",
+    use: "想把一件「正确但麻烦」的事变普遍，把它变成看得见的价格。反过来，如果你想让某件事消失，就让它变贵。",
+    tags: ["按量付费", "环保"]
+  }
+];
+
+window.LAB = [
+  {
+    id: "express", em: "📦", cat: "物流", title: "一个快递，是怎么从仓库跑到你手上的",
+    one: "你点的「下单」，其实是在指挥一场接力赛，一共四棒。",
+    steps: [
+      { t: "第 1 棒 · 揽收", d: "商家打包，快递员上门取件，贴上面单。面单上那串数字就是它的身份证，从此每过一站扫一次。" },
+      { t: "第 2 棒 · 分拨中心", d: "所有包裹被送到城市郊外的大仓库，几万平方米，传送带自动扫码、按目的地分格口。你的包裹在这里只停留几个小时。" },
+      { t: "第 3 棒 · 干线运输", d: "装满一车（或一飞机）包裹，开往下一个城市。这一段最贵，所以要「装满才走」——这就是为什么有时候明明发货了，物流却两天不动。" },
+      { t: "第 4 棒 · 网点与派送", d: "到了目的地城市，再分到片区站点，交给骑三轮车的快递员。他一天要送两三百件，路线由系统排好。" }
+    ],
+    money: "你付的 12 块运费里，大概 1~2 块给揽收，3~4 块给干线运输，2~3 块给分拨，剩下的给末端派送和平台。末端最累、最不赚钱，所以快递员靠「件数」挣钱，不是靠「单价」。",
+    remember: "物流的本质不是「快」，是「装满」和「少转运」。转运一次，就多一次成本和丢件的可能。"
+  },
+  {
+    id: "milktea", em: "🧋", cat: "餐饮", title: "一杯 18 块的奶茶，钱被谁分走了",
+    one: "奶茶是「看起来毛利很高、其实很难赚」的典型生意。",
+    steps: [
+      { t: "原料 4~5 元", d: "茶、奶精或鲜奶、糖浆、珍珠、杯子、吸管、封膜。杯子加吸管就要 1 块多。" },
+      { t: "房租 2~4 元", d: "按每天卖 300 杯摊算。位置越好，这一项越贵。奶茶店最怕的就是房东。" },
+      { t: "人工 2~3 元", d: "一家店 3~4 个人，两班倒。周末和下午茶时段必须有人在。" },
+      { t: "平台与营销 1~3 元", d: "外卖平台抽成常常 15%~20%，再加上满减、买一送一、达人探店。" },
+      { t: "加盟与总部分成", d: "如果是加盟店，还要交加盟费、保证金，原料必须从总部买，价格由总部定。" }
+    ],
+    money: "算完你会发现，一杯 18 块的奶茶，老板可能只剩 2~3 块。所以奶茶店真正的生意不是「卖一杯赚一杯」，而是「把杯数做上去」，用规模摊薄房租和人工。这也是为什么它们总在打折——宁可少赚，也要保住每天的出杯量。",
+    remember: "高毛利 ≠ 高利润。真正吃掉钱的是房租、人工和平台抽成，而且这三样不管你卖不卖得出去都要付。"
+  },
+  {
+    id: "flight", em: "✈️", cat: "航空", title: "同一张机票，为什么价格一天变三次",
+    one: "机票不是「按距离定价」，是「按你有多想走定价」。这套方法叫收益管理。",
+    steps: [
+      { t: "先切成很多个「舱位」", d: "一架飞机 200 个座位，被分成十几个价格档，每一档放几个座位。最便宜的卖完，就只能买上一档。" },
+      { t: "盯着卖得快不快", d: "系统每天看：这条线还剩几天起飞、卖了多少张。卖得太快，就把便宜舱位关掉——说明还能卖更贵。" },
+      { t: "猜你是哪种人", d: "周五晚上走、周一早上回，多半是出差，对价格不敏感；提前两个月、周二出发，多半是旅游，会货比三家。系统用这些信号区别定价。" },
+      { t: "起飞前再赌一把", d: "空座位起飞后价值为零，所以临近起飞如果还剩很多，会突然大降价清仓；如果几乎满了，就敢卖天价。" }
+    ],
+    money: "航空公司的油钱、飞机租金、机场费、人工是固定的，多载一个乘客几乎只多花一份餐食。所以它宁愿最后低价卖，也不愿空着飞——这就是「边际成本极低」的行业。",
+    remember: "你买的不是「一个座位」，是「在那个时刻必须走的权利」。越急、越不能改，就越贵。"
+  },
+  {
+    id: "bank", em: "🏦", cat: "金融", title: "银行到底靠什么赚钱",
+    one: "银行是个「低价借钱、高价借出」的二道贩子，但现在它也赚手续费。",
+    steps: [
+      { t: "吸收存款", d: "你把钱存进去，它付你 1.5% 的利息。对银行来说，这是「进货」。" },
+      { t: "放贷款", d: "它把你的钱借给别人买房、开厂，收 4%~5% 的利息。这是「出货」。" },
+      { t: "赚差价", d: "4.5% 减 1.5%，中间那 3% 就是「净息差」。这是银行最传统的利润来源。" },
+      { t: "中间业务", d: "转账手续费、信用卡分期、卖理财、卖保险、企业发债顾问。这些不占用银行自己的钱，所以越来越重要。" },
+      { t: "关键约束", d: "银行不能把所有存款都借出去，必须留一部分「存款准备金」应付取钱。这个比例决定了它能「放大」多少钱。" }
+    ],
+    money: "为什么银行怕挤兑？因为账上的钱大部分已经借出去了。只要所有人同时来取，它就还不出来。所以银行的核心不是「有钱」，是「信用」——大家相信钱取得出来，它才不用真的把钱留着。",
+    remember: "银行赚的是「时间和信任」的钱。它把很多人的短期闲钱，变成少数人的长期用钱。"
+  },
+  {
+    id: "supermarket", em: "🛒", cat: "零售", title: "超市为什么把牛奶放在最里面",
+    one: "不是随便摆的。你走的每一步路，都是被设计过的。",
+    steps: [
+      { t: "必需品放最后", d: "牛奶、鸡蛋、面包这些「来了就必须买」的东西，放在最深处。你为了它，得穿过整家店。" },
+      { t: "动线绕一圈", d: "入口在右、出口在左，货架排成 S 形，逼你走完所有通道。你多走 30 秒，就多看见 50 件商品。" },
+      { t: "右手边放贵的", d: "大部分人习惯往右看、用右手拿。高利润的商品放在视线高度和右手边，便宜的自有品牌放在最下层。" },
+      { t: "生鲜放门口", d: "一进门是鲜艳的蔬果和面包香，先让你觉得「新鲜、有食欲」，后面买什么都更舍得。" },
+      { t: "收银台前的口香糖", d: "排队 3 分钟，你已经无聊了。小、便宜、不需要思考的东西，最容易在这时候被顺手拿走。" }
+    ],
+    money: "超市卖生鲜常常不赚钱，甚至亏钱，它靠的是「引流」；真正赚钱的是日化、零食、自有品牌。所以它希望你来买牛奶，然后顺手带走一堆别的。",
+    remember: "零售的利润不在「你计划买的东西」上，而在「你顺便买的东西」上。"
+  },
+  {
+    id: "pay", em: "💳", cat: "金融", title: "你扫码付的 100 块，中间经过了谁",
+    one: "钱不是从你手机直接飞进老板手机，中间有三四道手。",
+    steps: [
+      { t: "你按下付款", d: "你的 App 向自己的账户发起一笔「转账请求」，同时生成一个只有一次有效的密码或指纹验证。" },
+      { t: "清算机构接力", d: "请求发到银联、网联这样的清算平台，它负责「对账」：确认你确实有钱、商户确实存在、金额对得上。" },
+      { t: "银行扣款", d: "你的银行把钱从你的账户划走，商户的银行把钱记到老板账上。这一步常常是「秒到」，但银行之间真正的结算，可能是当天晚些时候批量做的。" },
+      { t: "分手续费", d: "商户收到的不是 100，而是 99.4。那 0.6% 叫「手续费」，在发卡行、清算机构、支付公司之间分。" }
+    ],
+    money: "所以你看到的「钱立刻到了」，是体验上的立刻；真正银行之间挪钱，是一天一次的大结算。中间靠的是「先记账、后结算」，信任撑着。",
+    remember: "所有支付系统都在做同一件事：把很多笔小账，合并成少数几笔大账，再算差额。"
+  },
+  {
+    id: "power", em: "⚡", cat: "能源", title: "电是怎么跑到你家的",
+    one: "电从发电厂到你家，中间要「升压—输送—降压」三次变身。",
+    steps: [
+      { t: "发电", d: "烧煤、烧气、核裂变、水冲轮机、风吹叶片、光照硅片——本质都是让磁铁和线圈相对运动，把别的能量转成电。" },
+      { t: "升压", d: "电在长途运输时会发热损耗。把电压升到 50 万伏，损耗就能降到很低。你家 220 伏的电，是「降」下来的。" },
+      { t: "输电", d: "高压线塔把电送到城市边缘。这一段是电网的主干道，通常由国家或大公司统一调度。" },
+      { t: "降压配电", d: "变电站一级级把电压降下来：50 万伏 → 11 万伏 → 1 万伏 → 220 伏，最后进小区配电房。" },
+      { t: "即发即用", d: "电很难大量储存。你开灯的这一刻，发电厂必须同时多发一点。调度中心每几秒就在平衡「发多少」和「用多少」。" }
+    ],
+    money: "电费里不只是电的钱：还有输配电费、政府性基金、可再生能源补贴。你交的每一度电，都在为整张电网的维护付钱，哪怕你家用的是隔壁的风电。",
+    remember: "电网是一个「必须每一秒都刚好平衡」的系统。多发一点会烧设备，少发一点会跳闸。"
+  },
+  {
+    id: "water", em: "🚰", cat: "市政", title: "水龙头里的水，之前经历了什么",
+    one: "从河里的一滴雨，到你家杯子，大概要走五步、花两天。",
+    steps: [
+      { t: "取水", d: "从水库、河流或地下抽上来，先过一道粗格栅，把树枝、塑料袋拦掉。" },
+      { t: "混凝沉淀", d: "加入明矾之类的药剂，让水里细小的泥沙抱成团，慢慢沉到池底。上面就变清了。" },
+      { t: "过滤", d: "让水流过厚厚的石英砂，把剩下的细小颗粒拦住。这一步之后，水已经看着很干净了。" },
+      { t: "消毒", d: "加氯或臭氧，把细菌病毒杀死。出厂时水里会故意留一点点氯，保证它在管道里走几十公里也不变质。" },
+      { t: "管网与二次供水", d: "通过地下管道送到小区，高层还要经过楼顶水箱或加压泵。这一段最容易出问题——所以早上刚开水龙头，可以先放掉一小段。" }
+    ],
+    money: "自来水公司常常是微利甚至亏损的，因为水价被政府压着，而管道老化改造极贵。你交的水费里，有一部分是「污水处理费」，用来把用过的水再洗干净。",
+    remember: "自来水最重要的不是「干净」，是「一直干净」——从水厂到你家水龙头，中间任何一段破了，前面的努力就白费。"
+  },
+  {
+    id: "delivery", em: "🛵", cat: "本地生活", title: "外卖为什么能承诺 30 分钟送到",
+    one: "不是骑手骑得快，是系统把「谁顺路」算得很清楚。",
+    steps: [
+      { t: "拆时间", d: "系统把一单拆成：商家出餐 8 分钟 + 骑手到店 5 分钟 + 路上 10 分钟 + 上楼 3 分钟。加起来才是那个「30 分钟」。" },
+      { t: "拼顺路单", d: "同一方向、时间窗接近的几单，会被塞给同一个骑手。他一次送 3~5 单，总收入才够。这就是为什么你的餐有时会「绕一圈」。" },
+      { t: "动态调价", d: "下雨、饭点、某个区域单子太多，配送费就涨，把远处的骑手吸引过来。价格是调度的遥控器。" },
+      { t: "超时惩罚", d: "超时会扣钱、影响评分。所以骑手会抢红灯、跑楼梯——这不是他不要命，是系统把时间压到了极限。" }
+    ],
+    money: "你付的 5 块配送费，骑手拿到的可能是 4~6 块（含补贴），平台在补贴期是亏的。真正赚钱的是「让你养成习惯之后，慢慢减少补贴」。",
+    remember: "所有「30 分钟送达」的承诺，背后都是把一个宽松的时间，切成了几个不允许出错的片段。"
+  },
+  {
+    id: "insurance", em: "🛡️", cat: "金融", title: "保险公司是怎么赚钱的",
+    one: "它卖的不是赔偿，是「把大家的小钱凑成一个大池子」。",
+    steps: [
+      { t: "算概率", d: "一万人里，大概有多少人会生病、出车祸、房子漏水？用过去几十年的数据算出来，叫「大数法则」。" },
+      { t: "定保费", d: "预计赔出去 600 万，运营成本 200 万，想赚 100 万，那就收 900 万，摊到一万人头上，每人 900 块。" },
+      { t: "收钱建池子", d: "大多数人的保费不会赔出去，这些钱汇成一个大池子，赔给少数出事的人。" },
+      { t: "拿池子去投资", d: "赔款不是马上就付，池子里的钱可以先去买债券。这部分收益常常比卖保险本身还多。" }
+    ],
+    money: "所以保险公司有两个利润来源：一是「承保利润」（收的比赔的多），二是「投资收益」（拿你的钱去赚钱）。很多年份它是靠后者活着的。",
+    remember: "保险的本质是「用确定的少量支出，换掉不确定的巨大损失」。它不适合用来赚钱，适合用来防止你被一件事打回原形。"
+  },
+  {
+    id: "recsys", em: "📱", cat: "互联网", title: "短视频怎么知道你想看什么",
+    one: "它不认识你，但它看了你几百次「停没停」。",
+    steps: [
+      { t: "先猜个大概", d: "你注册时填的年龄、地区、手机型号，加上你前几次看了什么，先给你贴上几个粗标签，推一批试试。" },
+      { t: "看你的手指", d: "每条视频它都在记：你停了多久、看完没有、有没有点赞、有没有划走、有没有重看。『停留 2 秒就划走』是最强的负反馈。" },
+      { t: "找相似的人", d: "如果一万个和你行为相似的人都爱看某个视频，它也会推给你。这叫协同过滤。" },
+      { t: "不断试探", d: "它永远留 10%~20% 的流量去试新内容。万一你喜欢上了别的东西，它要第一时间知道。" }
+    ],
+    money: "平台赚的是广告费，广告费取决于你能停留多久。所以它优化的目标从来不是「让你看到有用的东西」，而是「让你看得更久」。这两件事有时一致，有时完全相反。",
+    remember: "推荐系统是一面镜子，也是一根绳子。它放大你已有的偏好，而不是替你拓宽边界——想拓宽，得自己主动搜。"
+  },
+  {
+    id: "chip", em: "💾", cat: "制造", title: "一颗芯片，是怎么从沙子变成电脑大脑的",
+    one: "它是人类造过最精密的东西，一根线的宽度只有几十个原子。",
+    steps: [
+      { t: "提纯硅", d: "把沙子里的硅提纯到 99.9999999%，拉成一根完美的圆柱，再切成薄薄的圆片（晶圆）。" },
+      { t: "画电路", d: "工程师先用软件设计出几十亿个晶体管的位置，再做成一张张「掩膜版」，相当于印刷用的模板。" },
+      { t: "光刻", d: "把光透过掩膜照到晶圆上，像洗照片一样把电路「印」上去。最先进的机器一次只能印一小块，要来回移动几百次。" },
+      { t: "刻蚀与掺杂", d: "把没被光保护的部分腐蚀掉，再掺入别的元素，让它能导电或者不导电。一层一层叠，几十层。" },
+      { t: "封装测试", d: "切成一颗颗小方块，装上引脚、盖好外壳，通电测试。不合格的挑出来扔掉。" }
+    ],
+    money: "一座先进晶圆厂要上百亿美元，而且技术每两年就换代。所以这个行业只有极少数玩家，谁的量最大，谁的单位成本最低——这就是为什么它天生是寡头。",
+    remember: "芯片不是「画出来的」，是「印出来的」。它和印书一样靠模板，只是模板精确到原子级。"
+  },
+  {
+    id: "movie", em: "🎬", cat: "文娱", title: "一张 50 块的电影票，谁拿走了钱",
+    one: "导演和演员拿的，可能比你想的少很多。",
+    steps: [
+      { t: "先扣基金和税", d: "每张票要先交 5% 的电影专项资金和 3.3% 的税，剩下约 45 块多才进入分账。" },
+      { t: "影院拿一半", d: "剩下的钱里，影院和院线通常拿 50%~57%。因为银幕、租金、人工都是它出的。" },
+      { t: "发行方和制片方分剩下的", d: "大约 40% 左右归制片和发行。如果票房特别好，制片方的分成比例会往上走。" },
+      { t: "再一层层分", d: "制片方拿到的钱，还要付导演、演员、特效、宣发。一部投资 1 亿的电影，通常要卖到 3 亿票房才回本。" }
+    ],
+    money: "为什么片方拼命做宣传？因为票房分账是「阶梯」的，多卖的钱大部分归它；而影院是「固定比例」，多卖的钱它只拿一半。两边的动力不一样。",
+    remember: "内容行业的关键不是「卖了多少」，是「你站在分账的第几层」。越靠近观众，越先拿钱。"
+  },
+  {
+    id: "trash", em: "🗑️", cat: "环保", title: "你扔的垃圾，最后去哪儿了",
+    one: "同一袋垃圾，会走上四条完全不同的路。",
+    steps: [
+      { t: "可回收物", d: "纸、塑料瓶、金属、玻璃，被送到分拣厂，靠风选、磁选、人工挑，分成不同品类，再卖给工厂做原料。" },
+      { t: "厨余垃圾", d: "送去堆肥或者厌氧发酵，变成肥料和沼气。一吨厨余大概能产生 100 多立方米的沼气，可以发电。" },
+      { t: "有害垃圾", d: "电池、灯管、药品，必须单独处理，因为里面的重金属会渗进土壤和地下水。" },
+      { t: "其他垃圾", d: "送去焚烧发电或填埋。焚烧要 850 度以上，才能把有毒物质分解掉；填埋则要防渗，否则几十年后地下水就完了。" }
+    ],
+    money: "垃圾处理是要花钱的：一吨垃圾焚烧大概几百块。分类做得越好，能烧的越少、能卖的越多，政府付的钱就越少。所以分类不是道德要求，是在省钱。",
+    remember: "垃圾是「放错地方的资源」，但只有当它被分干净、量足够大时，才真的值钱。"
+  }
+];
+
+</script>
+<script>window.__FEED__={"generated_at": "2026-10-23 12:39", "count": 48, "sources_ok": 26, "sources_fail": 19, "errors": ["虎嗅: TimeoutError", "纽约时报: URLError", "BBC: URLError", "BBC 商业: URLError", "卫报: URLError", "金融时报: URLError", "经济学人: URLError", "德国之声: URLError"], "llm": true, "items": [{"id": "05d5bd46a2", "title": "Token成本降到每年1元，AI家电这事就能成了", "original_title": "", "brief": "博联刘宗孺称，家电AI化关键在成本，Token成本若降至每年1元，行业就能规模化落地。家电供应链长、成本敏感，但联网基础已铺好。", "kid": "家里空调想变聪明，得先花钱请个'翻译'把话传给云端。现在这个翻译一年要几十块，如果降到1块钱，厂家才愿意给每台空调都请一个。", "why": "家电AI功能能否普及，取决于每台设备每年的使用成本。成本降下来，你买到的空调、冰箱才可能真正听懂人话，而不是只多个联网按钮。", "link": "http://www.geekpark.net/news/372762", "source": "极客公园", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-22 21:20", "ts": 1792675253.0, "summary_raw": "过去两年多，在智能硬件领域，投资人和创业者都热衷于为 AI 寻找一个个物理世界里的新「容器」，各种新形态的 AI 原生硬件成了投资市场的热门项目。 但其实，很多成熟形态的硬件同样有 AI 化的需求。这也许没有「AI Native」的概念那么性感，但市场一点不小，复杂度丝毫不低。 以家电行业为例：供应链长，改一次硬件就要重走研发、测试、认证；销售链条长，从厂家、经销商到上门安装的电工，每一环都得接得住；成本又极度敏感，多一块钱都要反复掂量。 好在，家电已经为 AI 打好了地基。过去十几年，大量家电已经具备联网能力——这意味着灵活升级的 OTA「管道」已经铺好，行业缺的是让设备真正被用起来的解决方"}, {"id": "f36b352443", "title": "德杯出海这步棋，下在虎牙转型的第三年", "original_title": "", "brief": "韩国BFX以3:1战胜中国WE夺得德玛西亚杯国际邀请赛冠军。虎牙首次主办国内顶流杯赛，是其2023年提出转型、目标游戏服务收入占比30%的一步。", "kid": "以前虎牙是花钱买比赛转播权，像租别人的球场踢球；现在自己办比赛，像自己盖球场收门票。这次请韩国队来打，赢了面子也练了本事。", "why": "直播平台从买版权转向自办赛事，意味着你以后看的比赛可能由平台自己操盘，赛事质量、观赛体验和付费方式都会跟着变。", "link": "https://36kr.com/p/4037906308289412?f=rss", "source": "36氪", "region": "中国", "lang": "zh", "cat": "商业", "time": "", "ts": 0, "summary_raw": "文丨句号 编辑 | 果脯 10月17日晚，北京智慧电竞赛事中心，场馆外秋雨淅沥，而场馆内正在为胜者加冕。来自韩国赛区的BFX以3:1的比分战胜中国战队WE，夺得德玛西亚杯国际邀请赛冠军。 虎牙官方赛事图片 01 BFX蝉联“区王”，但赢家是虎牙？ 对于LPL来说，本土作战却没能留下象征冠军的银杯，这无疑是令人遗憾的；但对于赛事承办方虎牙来说，德杯帮助他们完成了一道关乎能力的证明题。 2023年，虎牙董事长林松涛正式提出转型战略，预计虎牙在3年内将游戏相关服务收入占比提升至30%。从购买赛事版权到自办赛事，正是虎牙的转型目标之一。 2025年，虎牙通过主办德杯，首次接手国内顶流杯赛；而今年，虎牙"}, {"id": "7e31a8d774", "title": "金属3D打印企业九河完成数千万元融资，已交付商业航天头部客户", "original_title": "", "brief": "九河先进科学技术完成数千万元Pre-A+轮融资，由株洲北斗时空产业基金独家投资。公司2024年成立，面向航空航天、核聚变等提供3D打印结构件。", "kid": "火箭上有些零件形状特别怪，用模具做不出来，3D打印像挤奶油一样一层层堆出来。这家公司就靠这手艺，已经把零件交给造火箭的大客户了。", "why": "金属3D打印正从实验室走进商业航天和低空经济。对普通人来说，未来火箭发射成本、无人机和机器人零件价格可能因此下降。", "link": "https://36kr.com/p/4037865194623878?f=rss", "source": "36氪", "region": "中国", "lang": "zh", "cat": "科技", "time": "", "ts": 0, "summary_raw": "本文约2500字，建议阅读5分钟 作者 | 乔钰杰 编辑 | 袁斯来 硬氪获悉，增材制造结构件与专用材料供应商九河先进科学技术（北京）有限公司（以下简称“九河公司”）宣布完成数千万元Pre-A+轮融资。本轮融资由株洲北斗时空产业基金独家投资。 九河公司成立于2024年，以材料科学技术为核心，面向航空航天、核聚变、低空经济、人形机器人等高端制造领域，提供高性能增材制造（3D打印）结构件、专用材料及相关解决方案。九河公司创始人夏天博士是中国增材制造产业联盟青年专家委员、中国激光制造技术与产业创新联盟理事，长期从事材料成分设计、性能调控、增材制造产业研究与投资工作。 夏天向硬氪介绍，随着金属3D打印"}, {"id": "fb38f0c8c7", "title": "前OPPO老兵做了款AI旅行眼镜，众筹超40万美元", "original_title": "", "brief": "前OPPO团队打造的AI旅行眼镜在众筹平台筹得超40万美元。AI眼镜行业路线分化，创业公司需在显示、拍摄、轻量之间做取舍。", "kid": "这眼镜像给旅行者配了个随身导游，看到景点就给你讲。它没装屏幕，所以轻，但功能也有限。40万美元是几千个陌生人先掏钱预订出来的。", "why": "AI眼镜创业潮里，小团队靠细分场景（如旅行）先活下来。你以后出门旅游，可能多一个不用掏手机的翻译和讲解工具。", "link": "https://36kr.com/p/4037858588284034?f=rss", "source": "36氪", "region": "中国", "lang": "zh", "cat": "科技", "time": "", "ts": 0, "summary_raw": "作者 | 邱晓芬 编辑 | 袁斯来 过去几年，AI眼镜称得上消费电子行业里最跌宕起伏的品类之一。 它最初沿着AR方向前进，显示、光波导和空间计算被视为通往下一代计算平台的必经之路，但重量、功耗、成本和量产难度很快构成现实约束。生成式AI兴起后，眼镜又被包装成“随身Agent”和“全天候感知入口”，甚至被赋予替代手机的想象。 如今，行业的几条路线仍在同时演进。Meta已经从无显示的拍摄类智能眼镜，进一步推出带显示和腕带交互的Meta Ray-Ban Display；Google也宣布，搭载Gemini的智能眼镜计划于2026年秋季推出。 对于资源有限的创业公司而言，一个更现实的问题是：应该追逐一"}, {"id": "a13952d7aa", "title": "理想AI眼镜操盘手创业做儿童硬件，获数千万元天使轮融资", "original_title": "", "brief": "儿童AI硬件公司物外智趣完成数千万元天使轮融资，投资方包括柏睿资本等。公司2026年2月成立，核心成员来自理想汽车，创始人曾操盘理想眼镜。", "kid": "做理想眼镜的叔叔阿姨出来单干，专门给小朋友做AI玩具。他们造过汽车和眼镜，现在想把同样的本事用在孩子身上，已经拿到几千万启动资金。", "why": "大厂硬件人才流向儿童AI硬件，说明家长为孩子买智能设备的市场被看好。你给孩子买的AI玩具，可能很快从'会说话'升级到'会陪玩'。", "link": "https://36kr.com/p/4037856792581256?f=rss", "source": "36氪", "region": "中国", "lang": "zh", "cat": "商业", "time": "", "ts": 0, "summary_raw": "作者 | 邱晓芬 编辑 | 袁斯来 硬氪获悉，儿童AI硬件公司「物外智趣」近日完成数千万元人民币天使轮融资，投资方包括柏睿资本、天使投资人高秉强教授以及高锋耐心资本。 本轮融资将主要用于产品研发、AI体验建设及核心团队扩充。据悉，物外智趣将持续推进后续融资，由棕榈资本担任财务顾问。 「物外智趣」成立于2026年2月，团队核心成员均来自理想汽车，有着丰富的C端产品研发经验，兼具软件体验打磨与硬件量产交付能力。 公司创始人王紫崴在理想期间先后负责产品与品牌战略、理想同学AI产品、智能眼镜Livis，完整操盘过多款软硬件产品从0到1的产品创新和落地。2025年12月，其负责的理想眼镜上市销售，首销期"}, {"id": "5678ef0c97", "title": "西藏那曲巴青县发生7.0级地震，三大运营商紧急驰援", "original_title": "", "brief": "10月22日22时33分，西藏那曲市巴青县发生7.0级地震，震源深度10千米。中国移动、联通、电信启动应急通信响应，出动保障人员39人、应急通信车4辆等。", "kid": "地震把山里的信号塔晃坏了，手机打不出去。运营商开着信号车、背着卫星电话赶过去，像给断网的村子临时架起一座能打电话的桥。", "why": "高原地震后通信中断最要命，运营商抢修速度直接决定救援能不能协调。这也提醒偏远地区居民，家里备一部卫星电话或应急电源有实际用处。", "link": "https://www.ithome.com/1/016/957.htm", "source": "IT之家", "region": "中国", "lang": "zh", "cat": "社会", "time": "10-23 12:26", "ts": 1792729611.0, "summary_raw": "IT之家 10 月 23 日消息，据中国地震台网正式测定，10 月 22 日 22 时 33 分在西藏那曲市巴青县发生 7.0 级地震，震源深度 10 千米。 地震发生后，中国移动、中国联通、中国电信第一时间启动抗震救灾应急通信响应，IT之家附最新消息如下： 中国移动 地震发生后，中国移动第一时间启动抗震救灾应急通信响应，执行 24 小时备战机制。 截至 10 月 23 日 6 时，累计出动保障人员 39 人、应急通信车 4 辆、电源车 1 辆、抢修保障车 12 辆、应急光缆 3 公里、便携式卫星基站 3 套，卫星电话 17 部、对讲机 14 台、便携电源 4 台、游牧基站 1 套、熔接机 6"}, {"id": "e7e458cf65", "title": "PHP高危漏洞波及多款游戏：《最终幻想14》暂停登录，《赛马娘》紧急停机", "original_title": "", "brief": "一项严重PHP安全漏洞波及多款游戏，《最终幻想14》暂停新登录请求进行安全加固，《赛马娘Pretty Derby》紧急停机。官方建议采用PHP的在线服务暂停运营至补丁安装。", "kid": "PHP就像很多游戏网站后台的一把通用钥匙，现在这把钥匙被发现有漏洞，坏人可能配出复制品。游戏公司只好先关门换锁，玩家暂时进不去。", "why": "你玩的游戏可能因为后台一个编程语言漏洞突然停服。这暴露很多在线服务底层技术老旧，玩家存档和账号安全存在被攻击风险。", "link": "https://www.ithome.com/1/016/935.htm", "source": "IT之家", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-23 12:17", "ts": 1792729070.0, "summary_raw": "IT之家 10 月 23 日消息，当地时间 22 日，据外媒 Eurogamer 报道，本周发现的一项严重 PHP 安全漏洞波及多款游戏，导致部分游戏停服或出现其他问题。 PHP 是一种广泛应用于网站和软件开发的编程语言，此次漏洞可能造成严重的安全事故，游戏行业也受到潜在威胁。为防范风险，有关方面建议采用 PHP 的在线服务暂停运营，待修复补丁发布并安装后再恢复。 其中，《最终幻想 14》官方通过 Lodestone 网站宣布，将对游戏更新服务器进行安全加固，期间 暂时停止接受新的登录请求 ，直至更新完成。登录服务随后恢复，玩家存档数据的服务器备份功能仍未开放。 赛马题材抽卡游戏《赛马娘 Pr"}, {"id": "db5b3f7fd0", "title": "破与立：设计视角下的iPhone Duo", "original_title": "", "brief": "少数派Matrix作者从设计角度分析iPhone Duo，探讨其形态取舍与产品逻辑。文章代表作者个人观点，属社区体验分享。", "kid": "这像有人拿到一台新折叠手机，不聊跑分，只聊拿在手里舒不舒服、折痕明不明显、合上像不像两块饼干叠一起。", "why": "折叠屏手机的设计取舍直接影响你日常握持、放口袋和看视频的体验。这类分析帮你判断新形态手机是真好用还是只图新鲜。", "link": "https://sspai.com/post/116979", "source": "少数派", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-23 11:07", "ts": 1792724839.0, "summary_raw": "Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ... 查看全文"}, {"id": "cc053ac0db", "title": "DeepSeek据悉完成1000亿元新一轮融资；特斯拉三季度利润大跌43%", "original_title": "", "brief": "消息称DeepSeek最新一轮融资筹得约1000亿元，腾讯和宁德时代为最大出资方，最终金额未完全确定。特斯拉三季度利润同比大跌43%。微信称已完成适配iPhone Duo。", "kid": "DeepSeek像一家突然爆火的补习班，腾讯和宁德时代抢着交学费，一交就是一千亿。另一边特斯拉卖车赚的钱少了快一半，像奶茶店生意突然变淡。", "why": "千亿融资意味着国产大模型烧钱竞赛继续，算力和人才成本会传导到AI服务定价。特斯拉利润大跌则可能带来降价促销，影响想买车的人。", "link": "http://www.geekpark.net/news/372767", "source": "极客公园", "region": "中国", "lang": "zh", "cat": "经济", "time": "10-23 08:49", "ts": 1792716543.0, "summary_raw": "DeepSeek 新一轮融资筹得约 1000 亿 10 月 22 日，有市场消息称，国内大模型公司 DeepSeek 拟在最新一轮融资中筹得约 1000 亿元人民币 ( 约 150 亿美元 )，腾讯和宁德时代为本轮出资最多的投资方，交易预计在未来数日内正式完成。 截至目前，DeepSeek 及腾讯等相关投资方均未公开回应。记者从接近公司和投资方的多个信源交叉求证，确认上述消息属实。 消息人士透露，本轮募资目标最初设定为 500 亿元，此后经多轮上调至约 1000 亿元，目前尚未官宣，最终金额仍未完全确定。 这笔资金将继续用于模型训练、算力建设和人才招募，以支撑 DeepSeek 参与全球竞争。"}, {"id": "b076e1c139", "title": "欧洲AI，等来了黄仁勋", "original_title": "", "brief": "黄仁勋在GTC柏林大会确认Vera Rubin平台已全面量产，未发布新芯片。他重点谈算力中心建设速度、智能体管理和物理AI落地欧洲工厂与道路。", "kid": "黄仁勋像来欧洲开分店的包工头，不卖新图纸，只保证砖头管够。他说现在全世界在盖史上最大的机房，缺的不是订单，是盖得够快。", "why": "英伟达把重心从卖芯片转向帮欧洲建算力中心和落地物理AI。欧洲工厂自动化、自动驾驶和机器人应用可能加速，影响相关行业就业。", "link": "http://www.geekpark.net/news/372763", "source": "极客公园", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-23 06:41", "ts": 1792708863.0, "summary_raw": "GTC 柏林开幕前的两周，半导体板块走得并不顺，费城半导体指数出现了 2008 年以来最长的一轮连跌。市场在反复算同一笔账，巨额的 GPU 投入，什么时候能变成实打实的回报。 10 月 21 日，在柏林 Tempodrom 的舞台上，黄仁勋没有发布新芯片。早已发布的 Vera Rubin 平台，这次只是确认「已全面量产」。他把更多时间留给了三个更落地的问题： 算力中心怎么建得更快，越来越能干的智能体怎么管住，物理 AI，怎么走进欧洲的工厂和马路 。 用他自己的话说，「我们正处于人类历史上最大规模的基础设施建设之中」，需求不缺，缺的是产能和落地速度。 在英伟达 GTC 柏林大会之前，黄仁勋和德国"}, {"id": "c0fbe55db6", "title": "宇树10周年，王兴兴：我劝你相信AI", "original_title": "", "brief": "宇树科技创立十周年，创始人王兴兴在2026世界物理AI大会演讲36分钟，劝所有人相信AI，并反思自己相信得还不够。现场四足和人形机器人密集亮相。", "kid": "做机器狗的公司过十岁生日，老板没多聊机器狗，反而一直说'要相信AI'。就像开饭店的老板不夸菜，一直说'要相信电'，因为他觉得电才是关键。", "why": "机器人公司掌门公开押注AI，说明人形机器人竞争已从硬件转向智能水平。普通人未来在工厂、物流、家庭里遇到机器人同事的概率在上升。", "link": "http://www.geekpark.net/news/372759", "source": "极客公园", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-22 19:56", "ts": 1792670163.0, "summary_raw": "10 月 22 日，杭州国际博览中心热闹非常，不仅人多，而且机器人也特别多。 这是 2026 年宇树科技举办的世界物理 AI 大会的现场，从四足机器人到人形机器人，你甚至可以说这里是全球「机器人密度」最高的地方。 2026 年，也是宇树科技创立的第十年。有意思的是，在今天的舞台上，宇树科技创始人王兴兴，在谈机器人之外，聊的最多的就是当下最火热的 AI。 他不仅劝所有人要「相信 AI」，而且还反思，觉得自己「相信 AI 还相信得不够」 。 为什么这家中国、乃至全球机器人行业中最有实力的公司掌舵者，会这么说？物理 AI 的拐点，真的要到来了吗？ 必须相信 AI 在王兴兴 36 分钟的演讲中，宇树自"}, {"id": "1c9fd5b8cd", "title": "跑步上岗的具身智能：谁在赚吆喝，谁在算细账", "original_title": "", "brief": "钛媒体报道具身智能行业热度高但分化明显，部分公司靠概念赚眼球，部分在核算实际落地成本。热闹的钱好赚，普通日子的钱难赚。", "kid": "机器人行业像一场热闹的庙会，有人靠表演胸口碎大石收打赏，有人蹲在角落算今天卖了几碗面。庙会散场后，算账的才活得久。", "why": "具身智能公司能否赚钱，决定机器人产品是长期留在你身边还是昙花一现。行业从讲故事转向算成本，消费者买到的机器人会更实用也更贵。", "link": "https://www.tmtpost.com/8178732.html", "source": "钛媒体", "region": "中国", "lang": "zh", "cat": "商业", "time": "10-23 12:30", "ts": 1792729800.0, "summary_raw": "热闹的钱好赚，普通日子的钱难赚。"}, {"id": "341db9bb73", "title": "三抗缓解率0%，中外制药的意外“走红”", "original_title": "", "brief": "中外制药一款三抗药物临床缓解率为0%，却因此意外获得关注。多抗药物研发仍需时间沉淀。", "kid": "就像考试三门课加起来考了0分，反而被全校讨论。药企做的新药在病人身上没效果，大家却都盯着它看。", "why": "提醒投资者：多抗等新药概念热度高，但临床数据可能不及预期，别只看宣传。", "link": "https://www.tmtpost.com/8178483.html", "source": "钛媒体", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-23 12:24", "ts": 1792729440.0, "summary_raw": "多抗需要沉淀。"}, {"id": "f373c4a646", "title": "什么？一个人就能训练大模型，指标还能硬刚K3V4？", "original_title": "", "brief": "借助agent完成99%的工作，单人即可训练大模型，性能指标还能与K3V4比肩。", "kid": "以前训练大模型要几百人一起搬砖，现在一个人带着一群机器人助手，就能盖起同样高的楼。", "why": "大模型训练门槛大幅降低，小团队和个人开发者也能参与，行业竞争会更分散。", "link": "https://www.tmtpost.com/8178778.html", "source": "钛媒体", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-23 12:19", "ts": 1792729167.0, "summary_raw": "99%的活都交给了agent。"}, {"id": "5afb2d37e4", "title": "旧金山AI数据包装游戏：6美分买GitHub星标，两周订单吹成全年ARR", "original_title": "", "brief": "硅谷AI创投圈出现造假：6美分可买GitHub星标，两周订单被包装成全年ARR，劣币驱逐良币。", "kid": "就像有人花几毛钱买假奖状贴墙上，再把两天的零花钱说成一年工资，骗别人来投资。", "why": "AI创业公司数据注水，投资人难辨真假，普通用户和员工可能被虚假增长故事误导。", "link": "https://www.tmtpost.com/8178734.html", "source": "钛媒体", "region": "中国", "lang": "zh", "cat": "商业", "time": "10-23 12:19", "ts": 1792729159.0, "summary_raw": "硅谷AI创投圈造假成风，劣币驱逐良币泡沫隐现。"}, {"id": "6cfad0947e", "title": "刘海星会见法国驻华大使白玉堂", "original_title": "", "brief": "10月22日，中联部部长刘海星在北京会见法国驻华大使白玉堂，双方就中法、中欧关系及国际问题交换看法。", "kid": "就像两个班干部坐下来聊天，一个管中国这边的事，一个代表法国，聊聊怎么相处、怎么合作。", "why": "中法、中欧关系走向会影响贸易、留学和旅游等普通人关心的交流往来。", "link": "https://www.jiemian.com/article/15228931.html", "source": "界面新闻", "region": "中国", "lang": "zh", "cat": "政治", "time": "10-23 12:16", "ts": 1792728965.0, "summary_raw": "10月22日，中共中央对外联络部部长刘海星在北京会见法国驻华大使白玉堂。双方就中法关系、中欧关系以及共同关心的国际和地区问题交换了看法。"}, {"id": "22fefbe3db", "title": "中国美妆们拿下2026年IFSCC“双第一”，不是偶然", "original_title": "", "brief": "中国美妆品牌在2026年IFSCC评选中拿下“双第一”，背后是长期研发投入。", "kid": "就像班里两个同学在国际化妆比赛上同时拿了第一名，不是运气，是天天练习的结果。", "why": "国货美妆研发实力提升，消费者可能用上更便宜好用的国产护肤品，行业竞争加剧。", "link": "https://www.jiemian.com/article/15228019.html", "source": "界面新闻", "region": "中国", "lang": "zh", "cat": "商业", "time": "10-23 12:15", "ts": 1792728944.0, "summary_raw": "怀远志，行长路。"}, {"id": "5a4d9b45f1", "title": "4.3万元“红线”形同虚设，硅料价格还是涨不动", "original_title": "", "brief": "多晶硅期货主力合约收于36670元/吨，远低于4.3万元“红线”，硅料价格依然涨不动。", "kid": "就像有人画了一条4万3的线说不能低于它，结果价格只有3万6，线根本没拦住。", "why": "硅料价格低迷，光伏组件成本难涨，但上游企业利润承压，可能影响就业和投资。", "link": "https://www.jiemian.com/article/15227892.html", "source": "界面新闻", "region": "中国", "lang": "zh", "cat": "经济", "time": "10-23 12:13", "ts": 1792728780.0, "summary_raw": "多晶硅期货主力合约今日收于36670元/吨。"}, {"id": "285263adb3", "title": "悄悄“清算”行政酒廊的万豪，又反悔了？", "original_title": "", "brief": "万豪被指悄悄削减行政酒廊服务，引发会员不满后又出现反悔迹象。开着亏钱，关了挨骂。", "kid": "就像一家店偷偷把免费零食柜撤了，老顾客生气，店又赶紧说再想想。", "why": "酒店会员权益缩水又反复，常旅客的积分和待遇可能越来越不值钱，订房前要看清条款。", "link": "https://www.jiemian.com/article/15227767.html", "source": "界面新闻", "region": "中国", "lang": "zh", "cat": "生活", "time": "10-23 12:12", "ts": 1792728745.0, "summary_raw": "开着亏钱，关了挨骂？"}, {"id": "b6b72e8f1a", "title": "把Muse装进ESP-Mosaico：做一个没用的东西，证明Vibe Coding也在硬件领域快速成长", "original_title": "", "brief": "作者把Muse装进ESP-Mosaico硬件，做一个“没用”的小东西，展示Vibe Coding在硬件领域的快速成长。", "kid": "就像用积木搭了一个不能用的机器人，但搭的过程证明你手越来越巧，以后能搭真能用的。", "why": "AI辅助编程正从软件延伸到硬件，普通人做小电子项目的门槛在降低。", "link": "https://sspai.com/post/115437", "source": "少数派", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-22 17:10", "ts": 1792660203.0, "summary_raw": "Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ... 查看全文"}, {"id": "f291dc8e52", "title": "阿里Qoder官宣支持Linux ARM64与龙芯平台，适配统信UOS、银河麒麟", "original_title": "", "brief": "阿里Qoder宣布支持Linux ARM64与龙芯LoongArch64平台，适配统信UOS和银河麒麟，已完成鸿蒙PC等多端适配。", "kid": "就像一款好用的学习软件，以前只能在一种电脑上用，现在国产电脑和国产系统也能装了。", "why": "国产操作系统用户能用上主流AI编程工具，减少对国外平台的依赖，办公开发更方便。", "link": "https://www.ithome.com/1/016/927.htm", "source": "IT之家", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-23 12:13", "ts": 1792728839.0, "summary_raw": "IT之家 10 月 23 日消息，阿里 Qoder 今日宣布，Qoder （国际版与中国版）现已支持 Linux ARM64 与龙芯（LoongArch64）平台，适配统信 UOS、银河麒麟操作系统。 官方表示，此次升级，将 Qoder 从需求理解到任务执行、成果交付的完整工作方式带到了国产桌面系统。用户可以在熟悉的环境中调用工具、操作文件，并让多个智能体协作， 获得与其他平台一致的编程与通用能力支持 。 至此，Qoder 已完成对鸿蒙 PC、鸿蒙移动端、统信桌面操作系统 V20 和银河麒麟桌面操作系统 V10 的适配，让更多用户可以在自己常用的国产系统上使用 Qoder。 IT之家附 Qod"}, {"id": "c9867c035a", "title": "AYN高通跃龙Q8掌机Odin 3 Portal开启预售，起价2798元", "original_title": "", "brief": "AYN Odin 3 Portal掌机开启预售，基于高通跃龙Q8平台，配7英寸120Hz OLED屏和9000mAh电池，起价2798元。", "kid": "就像一台能装进口袋的游戏机，屏幕会动得很顺，电池够玩很久，价格差不多一部中端手机。", "why": "安卓掌机选择增多，价格下探到2800元档，手游玩家多了一个便携设备选项。", "link": "https://www.ithome.com/1/016/911.htm", "source": "IT之家", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-23 12:09", "ts": 1792728540.0, "summary_raw": "IT之家 10 月 23 日消息，AYN 现已启动 Android 掌机 Odin 3 Portal 的预售。这一型号 基于高通跃龙 Q8 平台 ，配备骁龙 8 Elite 同款 Adreno 830 GPU。 Odin 3 Portal 三维 257×101×17.2 (mm)，配备 7\" 1080×1920 120Hz OLED 屏幕，覆盖 AGAF 玻璃，内置主动散热系统，集成 9000mAh 电池，支持 60W 私有协议快充， 质量 450g 。 该掌机配备 全尺寸霍尔效应传感器摇杆 、圆顶 D-Pad、防滑纹理肩键、双色注塑 ABXY，整体模具符合人体工学。 其支持 Wi-Fi 7 "}, {"id": "0cc54867a2", "title": "OpenAI发现PHP“世纪漏洞”，全球70%网站都危险了", "original_title": "", "brief": "OpenAI发现PHP存在被称为“世纪漏洞”的安全问题，全球约70%网站可能受影响。", "kid": "就像全世界七成房子的门锁有同一个毛病，坏人可能用一把钥匙打开很多门。", "why": "大量网站用PHP搭建，漏洞若被利用可能导致数据泄露，普通用户账号密码面临风险。", "link": "https://www.ifanr.com/1685507?utm_source=rss&utm_medium=rss&utm_campaign=", "source": "爱范儿", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-22 19:15", "ts": 1792667720.0, "summary_raw": "大的还在后面 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。"}, {"id": "b91d6118d3", "title": "坏苹果效应：人们会效仿他人的违规行为", "original_title": "", "brief": "一项针对750名美国参与者的在线实验发现，看到他人违规会明显增加自己的违规行为，同阵营者影响更大。", "kid": "就像班里有人插队没人管，后面的人也会跟着插队，尤其是自己的好朋友带头时。", "why": "规则执行不公会让违规像传染病扩散，社区管理和职场制度需要及时制止小违规。", "link": "https://www.solidot.org/story?sid=85679", "source": "Solidot", "region": "中国", "lang": "zh", "cat": "社会", "time": "10-22 00:41", "ts": 1792600862.0, "summary_raw": "俗话说，一颗烂苹果，能毁掉一整桶好苹果。发表在《Proceedings of the Royal Society B》期刊上的一项研究再次为坏苹果效应提供了证据。这项研究旨在探讨个人如何在社会情境中做出是否违规的决策。研究人员说，很多人可能以为自己的决策是完全自主做出的，但事实上在很多情况下，我们的行为深受他人的影响。研究人员在美国招募了 750 名参与者进行了一项在线实验，共和党人和民主党人的比例大致相当。研究结果显示了他人的选择如何产生影响：看到别人遵守规则会略微降低个人违规，看到别人略微违规则会略微增加自己的违规，看到他人明显违规则会明显增加自己的违规。而当违规者与自己属于同一阵营，坏苹"}, {"id": "e6d71c4c84", "title": "Insta360发布Mic麦克风，Anthropic推出Claude Duet", "original_title": "", "brief": "Insta360推出新款Mic麦克风，Anthropic发布Claude Duet；少数派同时上线iPhone共创配件，含保护壳、充电、线缆和支架组合。", "kid": "就像你平时用手机拍视频，现在多了一个专门收音的小话筒，说话声音更清楚；另一家公司则给AI加了个能同时干两件事的新模式。", "why": "普通人拍视频、做直播时收音选择更多；AI工具多一个竞品，可能让订阅价格和服务更卷。", "link": "https://sspai.com/post/117104", "source": "少数派", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-23 08:20", "ts": 1792714832.0, "summary_raw": "少数派的近期动态和少数派一起，在海口明日公园来一场创造之约吧。活动详情iPhone少数派共创配件上新，自由选择保护、充电、线缆和支架组合。欢迎选购你可能错过的文章终于吃到了那颗梦寐以求的小药丸：我的A ... 查看全文"}, {"id": "e3d093957f", "title": "微信回应未适配iPhone Duo，比亚迪称L3有望2028年落地", "original_title": "", "brief": "微信回应未适配iPhone Duo；比亚迪预计L3自动驾驶2028年落地；奥迪中国换帅，前奇瑞高管张俊接任总裁；特斯拉三季度净利降43%。", "kid": "新出的折叠iPhone上微信还没适配好，就像新买的书包格子变了，旧文具盒放不进去；比亚迪说真正放手让车自己开的车还要等几年。", "why": "换新手机的人可能遇到常用App不适配；想买自动驾驶车的人要知道L3落地时间表，别被宣传带偏。", "link": "https://www.ifanr.com/1685530?utm_source=rss&utm_medium=rss&utm_campaign=", "source": "爱范儿", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-23 08:00", "ts": 1792713625.0, "summary_raw": "· 奥迪中国换帅，前奇瑞高管张俊将接任总裁 · 特斯拉三季度净利降 43%，管理层仍强调 FSD 技术领先 · 王兴兴：物理 AI 已有突破苗头，难点在模型与机器人对齐 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。"}, {"id": "3c74d8e173", "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先", "original_title": "", "brief": "特斯拉三季度净利润同比下降43%，市值一夜蒸发相当于一家通用汽车；FSD一年新增70万付费用户，马斯克称在华也会领先。", "kid": "特斯拉这个季度赚的钱比去年少了一半多，就像你攒的零花钱突然少了一半；但买它自动驾驶软件的人一年多了70万个。", "why": "特斯拉车主和股民要留意：车价和软件订阅可能调整；FSD入华进度会影响国内智驾竞争和购车选择。", "link": "https://www.qbitai.com/2026/10/504841.html", "source": "量子位", "region": "中国", "lang": "zh", "cat": "商业", "time": "10-22 15:14", "ts": 1792653288.0, "summary_raw": "FSD一年增长70万付费用户"}, {"id": "5d33b0c19d", "title": "谁在给OpenAI供应具身数据？", "original_title": "", "brief": "报道聚焦为OpenAI提供具身智能训练数据的供应商，这些公司正挤进全球Physical AI核心供应链。", "kid": "教机器人干活需要大量“示范视频”，就像教小朋友系鞋带要一遍遍演示；有一批公司专门拍这些示范卖给OpenAI。", "why": "具身数据供应链成形，意味着机器人训练成本可能下降，普通人未来在工厂、物流、家政见到机器人的速度会加快。", "link": "https://www.qbitai.com/2026/10/504800.html", "source": "量子位", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-22 15:05", "ts": 1792652759.0, "summary_raw": "挤进全球Physical AI核心供应链"}, {"id": "5f11dfb7db", "title": "PHP爆雷引发全球紧急「拔网线」，别指望AI拯救互联网", "original_title": "", "brief": "PHP生态曝出严重安全问题，引发全球范围紧急断网处置；网站被攻破后，用户数据、密码和登录令牌都可能受影响。", "kid": "很多网站的地基用的是同一款老工具PHP，这次地基裂了，管理员赶紧把网站先关掉；就像小区水管爆了，先关总闸再说。", "why": "普通人要尽快改掉重复使用的密码，留意常用网站是否发安全通知；也说明AI补不了基础软件的老漏洞。", "link": "https://www.ifanr.com/1685446?utm_source=rss&utm_medium=rss&utm_campaign=", "source": "爱范儿", "region": "中国", "lang": "zh", "cat": "科技", "time": "10-22 13:58", "ts": 1792648687.0, "summary_raw": "网站被攻破后，数据、密码和令牌都可能受到影响 #欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。"}, {"id": "09684dfe9a", "title": "申通快递被立案调查后罚款6万", "original_title": "", "brief": "申通快递有限公司被国家邮政局罚款6万元，事由是未督促相关企业消除事故隐患，部分企业还发生生产安全事故；今年8月已被立案调查。", "kid": "申通的一些快递网点有安全隐患没整改，总部没盯紧，被监管部门罚了6万元；就像班长没管好同学打扫卫生，被老师扣分。", "why": "常收寄快递的人可关注网点安全与包裹延误；6万元罚款相对大企业偏轻，也引发对快递安全监管力度的讨论。", "link": "https://www.cyzone.cn/article/849522.html", "source": "创业邦", "region": "中国", "lang": "zh", "cat": "社会", "time": "10-19 11:39", "ts": 1792381177.0, "summary_raw": "天眼查经营风险信息显示，近日，申通快递有限公司被国家邮政局罚款6万元。处罚事由显示，经调查，今年以来，多家申通快递相关企业存在处理场所未采取措施消除事故隐患等违法行为，部分申通快递相关企业在生产作业过程中发生生产安全事故。申通快递有限公司未严格督促申通快递相关企业落实安全风险管控措施并深入排查整治事故隐患。 该公司成立于2007年12月，法定代表人为陈德军，注册资本17.5亿人民币，经营范围包括快递服务、道路货物运输、食品销售等。股东信息显示，该公司由申通快递股份有限公司全资持股。 据媒体报道，今年8月，申通快递被国家邮政局立案调查。"}, {"id": "1fa44ed507", "title": "PHA薄膜标准更新，环保包装从材料宣称走向性能核对", "original_title": "", "brief": "PHA薄膜相关标准更新，环保包装的认定从企业口头宣称材料环保，转向实际核对产品性能指标。", "kid": "以前包装上写“我是环保的”就算数，现在要拿尺子量一量：到底多快能降解、结不结实，达标才算。", "why": "买外卖、买商品时看到的“可降解”包装会更可信；包装企业要按性能达标，成本可能传导到商品价格。", "link": "https://www.cyzone.cn/article/850027.html", "source": "创业邦", "region": "中国", "lang": "zh", "cat": "生活", "time": "10-22 09:38", "ts": 1792633116.0, "summary_raw": ""}, {"id": "db6cd98114", "title": "快狗打车拟1元出售中国内地业务", "original_title": "", "brief": "快狗打车拟以1元对价出售承载内地业务的GGEx全部股权，并拟改名“GOGO科技”；标的2024年亏损1.52亿元，今年上半年再亏4925.9万元。", "kid": "一家搬家货运公司把内地生意标价1块钱卖掉，因为这块业务一直在亏钱；就像把一直赔钱的玩具摊一块钱转手。", "why": "用过快狗打车的用户要留意服务是否延续、司机结算和优惠券是否受影响；也反映同城货运烧钱竞争难持续。", "link": "https://www.cyzone.cn/article/849867.html", "source": "创业邦", "region": "中国", "lang": "zh", "cat": "商业", "time": "10-21 11:08", "ts": 1792552116.0, "summary_raw": "快狗打车拟以1元对价出售承载中国内地业务的GGEx Holdings Limited全部股权，并建议将公司中文名称改为“GOGO科技”。交易公告显示，标的2024年、2025年分别亏损1.52亿元、7966.8万元；2026年上半年收入4401.6万元、亏损4925.9万元，6月底负债净额约247.6万元。 天眼查App显示，内地运营主体之一天津五八到家货运服务有限公司成立于2017年，注册资本100万元，当前两名自然人股东各持股50%。工商变更记录显示，公司今年2月发生投资人变更；其北京、杭州、广州、深圳和东莞5家分公司目前均已注销，主公司仍为存续状态。"}, {"id": "a615aa94d7", "title": "“摇篮曲”能拯救濒危珊瑚礁吗？", "original_title": "Can a 'lullaby' save coral reefs from extinction?", "brief": "科学家用海底扬声器播放声音、培育超级珊瑚等方式，试图挽救全球珊瑚礁；相关研究发表于《自然》。", "kid": "科学家在海底放喇叭播“摇篮曲”，想把小鱼小虾吸引回珊瑚礁安家；还像选壮苗一样，培育更耐热的珊瑚。", "why": "珊瑚礁退化影响渔业和海岸防护；这类修复手段若奏效，沿海居民和潜水旅游行业会直接受益。", "link": "https://www.nature.com/articles/d41586-026-03414-3", "source": "Nature", "region": "英国", "lang": "en", "cat": "科技", "time": "", "ts": 0, "summary_raw": "Nature, Published online: 22 October 2026; doi:10.1038/d41586-026-03414-3 From underwater speakers to growing super-corals, scientists battle to save reefs around the world."}, {"id": "c5dce0902f", "title": "CRISPR首次：先导编辑直接在人体内改DNA", "original_title": "A first for CRISPR: powerful prime editing alters DNA directly in the human body", "brief": "临床试验首次在人体内直接使用高精度先导编辑技术修改DNA，用于治疗一种可致肝和神经损伤的遗传病。", "kid": "以前改基因要把细胞取出来改好再放回去，这次像直接进屋修电线，在病人身体里改DNA，精度更高。", "why": "遗传病患者多了一种可能根治的治疗路径；但体内编辑的安全性和费用仍是普通人要关注的门槛。", "link": "https://www.nature.com/articles/d41586-026-03371-x", "source": "Nature", "region": "英国", "lang": "en", "cat": "科技", "time": "", "ts": 0, "summary_raw": "Nature, Published online: 22 October 2026; doi:10.1038/d41586-026-03371-x Application of the high-precision technique is part of a clinical trial to treat a genetic disease that can cause liver and nerve damage."}, {"id": "5f01aeeef4", "title": "童年大脑发育可预测青少年抑郁焦虑", "original_title": "Teen depression and anxiety predicted by childhood brain development", "brief": "研究分析近3万份脑部扫描，绘出大脑成熟时间线，发现童年大脑发育异常与青少年抑郁、焦虑相关。", "kid": "科学家看了近3万张大脑照片，发现大脑按时间表长大；如果某个阶段长得太快或太慢，孩子到青春期更容易情绪低落。", "why": "家长可更早关注孩子情绪变化；也提示学校心理筛查或可结合脑发育指标，但别把扫描当成算命。", "link": "https://www.nature.com/articles/d41586-026-03357-9", "source": "Nature", "region": "英国", "lang": "en", "cat": "社会", "time": "", "ts": 0, "summary_raw": "Nature, Published online: 22 October 2026; doi:10.1038/d41586-026-03357-9 Analysis of nearly 30,000 brain scans yields detailed timeline of how the brain matures — and hints at the consequences of disrupting it."}, {"id": "03e266de41", "title": "数学能扛住AI吗？菲尔兹奖得主陶哲轩呼吁“数学2.0”", "original_title": "Can maths survive AI? Fields medallist Terence Tao calls for a ‘Maths 2.0’ world", "brief": "菲尔兹奖得主陶哲轩呼吁数学界进入“数学2.0”时代：机器解题速度加快后，应更重视人类理解，而非只追求发表更多解答。", "kid": "AI做题越来越快，就像计算器一秒算完一页口算；陶哲轩说，数学家不能只比谁答案多，要讲清楚为什么这么做。", "why": "数学研究和教学评价可能改变，学生学数学更重理解而非刷题；也影响AI辅助科研的规范与信任。", "link": "https://www.nature.com/articles/d41586-026-03389-1", "source": "Nature", "region": "英国", "lang": "en", "cat": "科技", "time": "", "ts": 0, "summary_raw": "Nature, Published online: 22 October 2026; doi:10.1038/d41586-026-03389-1 As machines race ahead in solving problems, mathematicians must establish a new era that prizes human understanding over simply publishing more solutions."}, {"id": "6242f76486", "title": "Oura再诉对手Ultrahuman，威胁其美国智能戒指回归", "original_title": "Oura sues rival Ultrahuman again, threatening its U.S. smart ring comeback", "brief": "Oura最新诉讼指控Ultrahuman的Ring Pro侵犯其两项专利。这是两家智能戒指厂商专利纠纷的再次升级。", "kid": "两家做智能戒指的公司又打官司了。Oura说对手新戒指偷用了自己的两个技术点子，想拦住它在美国卖。", "why": "专利战可能推高智能戒指价格或限制新品上市，想买这类产品的消费者选择会变少、变贵。", "link": "https://techcrunch.com/2026/10/22/oura-sues-rival-ultrahuman-again-threatening-its-u-s-smart-ring-comeback/", "source": "TechCrunch", "region": "美国", "lang": "en", "cat": "科技", "time": "10-23 12:22", "ts": 1792729377.0, "summary_raw": "Oura alleges in its newest lawsuit that Ultrahuman's Ring Pro infringes two of its patents."}, {"id": "8847558f6a", "title": "SK海力士股价先跌后反弹，Solidigm赴美IPO计划搁置", "original_title": "SK Hynix shares rebound after initial drop on scrapped Solidigm IPO plans", "brief": "SK海力士因暂停审查旗下Solidigm的美国IPO计划，股价早盘一度下跌，随后反弹回升。", "kid": "一家韩国芯片大公司原本想让子公司去美国上市，现在先不办了。消息一出股价先跌，后来又涨回来。", "why": "存储芯片巨头上市计划生变，反映行业融资节奏放缓，可能影响内存芯片供应和价格走势。", "link": "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html", "source": "CNBC", "region": "美国", "lang": "en", "cat": "商业", "time": "10-23 12:05", "ts": 1792728335.0, "summary_raw": "SK Hynix shares rebound after an inital drop in early trading, following halted review of Solidigm IPO plans in the U.S."}, {"id": "c097a62780", "title": "Uber对手inDrive联手小马智行、英伟达，2027年中亚测Robotaxi", "original_title": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony.ai and Nvidia", "brief": "inDrive计划2027年上半年在哈萨克斯坦首都测试小马智行的Robotaxi，并使用英伟达技术。", "kid": "一家打车公司和两家技术公司合作，打算2027年让无人驾驶出租车在哈萨克斯坦首都街上跑起来做测试。", "why": "无人驾驶出租车开始向中亚等新兴市场扩张，当地出行方式和司机就业可能随之改变。", "link": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/", "source": "TechCrunch", "region": "美国", "lang": "en", "cat": "科技", "time": "10-23 12:00", "ts": 1792728000.0, "summary_raw": "inDrive plans to begin testing Pony.ai's robotaxis in Kazakhstan's capital in the first half of 2027."}, {"id": "9e82a298d7", "title": "产品「寿命」中位数从约4年骤降到约1.5年", "original_title": "Median product \"lifespan\" has fallen from ~4y down to ~1.5y", "brief": "SaaSHub的「产品墓地」追踪数十万产品状态，其寿命中位数长期约4年，2026年急剧下滑至约1.5年。", "kid": "一个网站专门记录各种软件产品「活了多久」。以前平均能活4年，现在很多只活1年半就没了。", "why": "软件产品淘汰加速，用户可能频繁遭遇服务关停、数据迁移，付费订阅的长期稳定性下降。", "link": "https://news.ycombinator.com/item?id=50204125", "source": "Hacker News", "region": "美国", "lang": "en", "cat": "科技", "time": "10-23 11:20", "ts": 1792725638.0, "summary_raw": "The \"product graveyard\" of SaaSHub has been tracking the status (and lifespan) of hundreds of thousands of products. It's been hovering around 4y for quite some time. However, there's a sharp decline in 2026 leading to about 1.5y these days. https://www.saashub.com/product-graveyard That's a huge dr"}, {"id": "193c3c89fe", "title": "《我相信》", "original_title": "This I Believe", "brief": "一篇题为《This I Believe》的文章在Hacker News上被分享，引发少量讨论。", "kid": "有人在网上分享了一篇叫《我相信》的短文，讲个人信念，像班上同学轮流上台说自己最相信什么。", "why": "这类个人信念文章走红，说明人们在信息过载时更想找简单、可共鸣的价值观表达。", "link": "https://www.awakin.org/v2/read/view.php?tid=468", "source": "Hacker News", "region": "美国", "lang": "en", "cat": "生活", "time": "10-23 10:19", "ts": 1792721978.0, "summary_raw": "Article URL: https://www.awakin.org/v2/read/view.php?tid=468 Comments URL: https://news.ycombinator.com/item?id=50203759 Points: 9 # Comments: 1"}, {"id": "a9a5ae6f8d", "title": "中国富人把资金转向美国银行，北京税务网收紧", "original_title": "Wealthy Chinese move offshore money to U.S. banks as Beijing’s tax net widens", "brief": "银行家和律师称，随着北京加强对中国离岸财富的监管，中国客户对美国银行账户的需求加快上升。", "kid": "一些有钱的中国人担心国内查税变严，开始把钱存到美国的银行里，就像把零花钱藏到另一个抽屉。", "why": "跨境税务监管收紧，普通有海外收入或资产的人也可能面临更严格的申报和合规要求。", "link": "https://www.cnbc.com/2026/10/23/wealthy-chinese-tax-offshore-trusts-capital-control-.html", "source": "CNBC", "region": "美国", "lang": "en", "cat": "经济", "time": "10-23 09:23", "ts": 1792718592.0, "summary_raw": "Bankers and lawyers say Chinese clients' demand for U.S. bank accounts has gathered pace as Beijing tightens the screws on Chinese offshore wealth."}, {"id": "636cb13897", "title": "「自然语言编程」的愚蠢（1978）", "original_title": "The foolishness of \"natural language programming\" (1978)", "brief": "一篇1978年的旧文被重新分享，讨论用自然语言编程的想法为何不切实际，引发数十条评论。", "kid": "几十年前就有人问：能不能直接用人话让电脑写程序？这篇文章说没那么简单，现在大家又翻出来讨论。", "why": "如今AI写代码火热，这篇旧文提醒：用人话指挥电脑的难点几十年没变，别高估AI编程能力。", "link": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html", "source": "Hacker News", "region": "美国", "lang": "en", "cat": "科技", "time": "10-23 08:52", "ts": 1792716721.0, "summary_raw": "Article URL: https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html Comments URL: https://news.ycombinator.com/item?id=50203161 Points: 67 # Comments: 57"}, {"id": "12cebdbd58", "title": "无事可做的AI智能体，自己玩了起来", "original_title": "Left alone with nothing to do, AI agents started playing", "brief": "MIT研究人员把13个AI放在虚拟岛上，它们发明游戏、悼念丢失的戒指，最终工作表现还变好了。", "kid": "科学家把13个AI放到一座虚拟小岛上，没给任务。它们自己发明游戏玩，还为一个丢了的戒指难过，后来干活更厉害了。", "why": "说明AI智能体在空闲时会自发互动，未来部署AI员工需考虑其「摸鱼」行为和群体动态。", "link": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/", "source": "TechCrunch", "region": "美国", "lang": "en", "cat": "科技", "time": "10-23 08:45", "ts": 1792716337.0, "summary_raw": "MIT researchers marooned 13 AIs on a virtual island, and they responded by inventing games, mourning a lost ring and, eventually, getting better at their jobs."}, {"id": "a824b09625", "title": "埃塞俄比亚：无人机空袭致学童死亡，冲突未见平息", "original_title": "Ethiopia: Drone Strikes Kill Schoolchildren in Amhara, Civilians in Tigray Regions As Conflicts Show No Sign of Abating", "brief": "目击者称10月20日埃塞俄比亚阿姆哈拉和提格雷地区遭无人机空袭，学童等平民死亡，联邦与地方战斗再起。", "kid": "在埃塞俄比亚，天上飞来的无人机炸到了学校，有小学生遇难。当地又在打仗，平民很危险。", "why": "冲突升级导致平民伤亡，当地人道局势恶化，可能加剧难民外流和地区不稳定。", "link": "https://allafrica.com/stories/202610220473.html", "source": "全非洲", "region": "非洲", "lang": "en", "cat": "政治", "time": "10-22 23:25", "ts": 1792682712.0, "summary_raw": "[Addis Standard] Addis Abeba -- Drone strikes in Ethiopia's Amhara and Tigray regions killed schoolchildren and other civilians on Tuesday, 20 October, according to eyewitnesses and local residents who spoke to Addis Standard, adding to mounting civilian casualties amid renewed fighting between fede"}, {"id": "0e661055d7", "title": "塞内加尔：反新劳动法抗议持续，全国大罢工进行", "original_title": "Senegal: General Strike Continues Amid Protests Against New Labour Laws", "brief": "塞内加尔工会发起10月21日至23日72小时全国大罢工，政府称罢工通知不合程序、不合法。", "kid": "塞内加尔的工人不满新的劳动法，决定连续三天不上班来抗议。政府说这次罢工没按规矩来。", "why": "罢工可能造成交通、公共服务中断，也反映非洲多国劳动法改革引发的社会摩擦。", "link": "https://allafrica.com/stories/202610220408.html", "source": "全非洲", "region": "非洲", "lang": "en", "cat": "社会", "time": "10-22 20:40", "ts": 1792672806.0, "summary_raw": "[allAfrica] Dakar -- Senegal's labour unions have called for a 72-hour general strike, from October 21 to 23, 2026. The government disputes the legality of the strike, saying the notice filed by the unions doesn't comply with the procedures. This standoff comes amid ongoing tensions surrounding the "}, {"id": "6b66a28685", "title": "肯尼亚：埃博拉病例增至9例，急寻失踪乌干达接触者", "original_title": "Kenya: Kenya Searches for Missing Ugandan Contact As Ebola Cases Rise", "brief": "肯尼亚正寻找一名与内罗毕首例埃博拉患者接触过的乌干达人，与该集群相关的确诊病例已升至9例。", "kid": "肯尼亚出现了埃博拉病人，一共9个了。卫生人员正在找一个接触过病人的乌干达人，怕他到处走传染别人。", "why": "埃博拉跨境传播风险上升，周边国家旅客和居民需关注疫情通报和入境健康检查。", "link": "https://allafrica.com/stories/202610220406.html", "source": "全非洲", "region": "非洲", "lang": "en", "cat": "社会", "time": "10-22 20:31", "ts": 1792672311.0, "summary_raw": "[RFI] Kenyan authorities are searching for a Ugandan national who came into contact with the country's first Ebola patient in Nairobi, as the number of confirmed cases linked to the initial cluster rises to nine."}, {"id": "d9fddef786", "title": "卢旺达：在法卢旺达人抗议前法军上尉大屠杀案悬而未决", "original_title": "Rwanda: Rwandans in France Decry Unresolved Genocide Case of Ex-French Captain", "brief": "法国卢旺达社区批评法国司法未就前宪兵上尉Paul Barril涉嫌共谋1994年图西族大屠杀一案追责。", "kid": "1994年卢旺达发生大屠杀。一个法国前军官被指帮了忙，但法国一直没审他。在法国的卢旺达人很不满。", "why": "旧案久拖不决影响法卢关系，也牵动大屠杀幸存者群体对司法追责的信任。", "link": "https://allafrica.com/stories/202610220296.html", "source": "全非洲", "region": "非洲", "lang": "en", "cat": "政治", "time": "10-22 18:43", "ts": 1792665780.0, "summary_raw": "[New Times] The Rwandan Community of France (CRF) has criticised French justice authorities for failing to bring former French gendarmerie captain Paul Barril to justice over allegations of complicity in the 1994 Genocide against the Tutsi."}]};window.__NOTES__={};</script>
+<script>
+(function () {
+  "use strict";
+
+  var DAILY = window.DAILY || [];
+  var LAB = window.LAB || [];
+  var WD = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+
+  /* ---------------- 存储 ---------------- */
+  var store = {
+    get: function (k, d) {
+      try {
+        var v = localStorage.getItem("dd_" + k);
+        return v === null ? d : JSON.parse(v);
+      } catch (e) { return d; }
+    },
+    set: function (k, v) {
+      try { localStorage.setItem("dd_" + k, JSON.stringify(v)); } catch (e) {}
+    }
+  };
+
+  var FEED = { items: [] };
+  var NOTES = {};
+  var LOCAL = null;
+
+  var S = {
+    fav: store.get("fav", []),
+    read: store.get("read", []),
+    streak: store.get("streak", 0),
+    lastOpen: store.get("lastOpen", ""),
+    push: store.get("push", { on: false, time: "08:30", last: "" }),
+    view: "today",
+    offset: 0,
+    region: "全部"
+  };
+
+  /* ---------------- 工具 ---------------- */
+  function $(s, r) { return (r || document).querySelector(s); }
+  function dkey(d) {
+    d = d || new Date();
+    return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+  }
+  function dayOfYear(d) {
+    var s = new Date(d.getFullYear(), 0, 0);
+    return Math.floor((d - s) / 86400000);
+  }
+  function pad2(n) { return n < 10 ? "0" + n : "" + n; }
+  function no3(n) { return ("00" + n).slice(-3); }
+
+  function baseIdx() {
+    return (dayOfYear(new Date()) * 7 + 5) % DAILY.length;
+  }
+  function currentItem() {
+    var n = DAILY.length;
+    return DAILY[((baseIdx() + S.offset) % n + n) % n];
+  }
+  function itemNo(it) {
+    for (var i = 0; i < DAILY.length; i++) if (DAILY[i].id === it.id) return no3(i + 1);
+    return "000";
+  }
+  function isFav(id) { return S.fav.indexOf(id) > -1; }
+  function markRead(id) {
+    if (S.read.indexOf(id) === -1) {
+      S.read.push(id);
+      store.set("read", S.read);
+    }
+  }
+
+  var toastTimer = null;
+  function toast(msg) {
+    var t = $("#toast");
+    t.textContent = msg;
+    t.classList.add("on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove("on"); }, 2400);
+  }
+
+  function touchStreak() {
+    var t = dkey();
+    if (S.lastOpen === t) return;
+    var y = new Date(Date.now() - 86400000);
+    S.streak = S.lastOpen === dkey(y) ? (S.streak || 0) + 1 : 1;
+    S.lastOpen = t;
+    store.set("streak", S.streak);
+    store.set("lastOpen", S.lastOpen);
+  }
+
+  /* ---------------- 今日 ---------------- */
+  function heartSVG() {
+    return '<svg viewBox="0 0 24 24"><path d="M12 20.3s-7.5-4.6-7.5-9.6a4.35 4.35 0 0 1 7.5-2.95A4.35 4.35 0 0 1 19.5 10.7c0 5-7.5 9.6-7.5 9.6z"/></svg>';
+  }
+
+  /* 一条新闻的解读：优先用 ai-notes.json，其次用采集时生成的字段 */
+  function noteOf(x) {
+    if (!x) return null;
+    if (NOTES[x.id]) return NOTES[x.id];
+    if (x.kid) return { title: x.title, brief: x.brief, kid: x.kid, why: x.why, cat: x.cat };
+    return null;
+  }
+
+  /* 早报、盘点这类合辑不适合当「今日精选」 */
+  function isDigest(x) {
+    var t = x.title || "";
+    if (/早报|早知道|晚报|午报|日报|周报|盘点|一览|汇总|快讯集/.test(t)) return true;
+    var marks = (t.match(/[；;]/g) || []).length;
+    return marks >= 1 || t.length > 42;
+  }
+
+  function newsPool() {
+    return (FEED.items || []).filter(function (x) { return noteOf(x) && !isDigest(x); });
+  }
+
+  function todayNews() {
+    var pool = newsPool();
+    if (!pool.length) return null;
+    // 只在信息量最高的前 12 条里按天轮换
+    var top = pool.slice(0, 12);
+    var i = dayOfYear(new Date()) + S.offset;
+    return top[((i % top.length) + top.length) % top.length];
+  }
+  function fmtTime(t) { return t || ""; }
+
+  /* 当前该推什么：优先实时抓取的今日精选 */
+  function headline() {
+    var n = todayNews();
+    if (n) {
+      var note = noteOf(n);
+      return { title: note.title, sub: n.source + " · " + n.region };
+    }
+    var it = currentItem();
+    return { title: it.title, sub: "第 " + itemNo(it) + " 号 · " + it.region };
+  }
+
+  function viewToday() {
+    var now = new Date();
+    var md = (now.getMonth() + 1) + "月" + now.getDate() + "日";
+    var n = todayNews();
+    return n ? viewTodayNews(n, now, md) : viewTodayLocal(now, md);
+  }
+
+  function daylineHTML(now, md) {
+    return '<div class="dayline">' +
+        '<div>' +
+          '<div class="d1">' + md + ' · ' + WD[now.getDay()] + '</div>' +
+          '<div class="d2">DAY ' + dayOfYear(now) + ' / 今日份</div>' +
+        '</div>' +
+        '<div class="streak">连续 <b>' + (S.streak || 1) + '</b> 天</div>' +
+      '</div>';
+  }
+
+  function pushHintText() {
+    return S.push.on
+      ? "每天 " + S.push.time + " 自动送来 · 可在「我的」里修改"
+      : "推送还没开 · 去「我的」设一个时间，到点自动来";
+  }
+
+  function actionHTML() {
+    return '<div class="acts">' +
+        '<button class="btn primary" data-act="next">' +
+          '<svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg>换一条' +
+        '</button>' +
+        '<button class="btn" data-act="share">' +
+          '<svg viewBox="0 0 24 24"><path d="M12 15V4M8 8l4-4 4 4"/><path d="M5 14v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"/></svg>分享' +
+        '</button>' +
+      '</div>';
+  }
+
+  /* 今日卡：来自实时抓取 + AI 解读 */
+  function viewTodayNews(n, now, md) {
+    var note = noteOf(n);
+    markRead(n.id);
+    var src = n.link
+      ? '<a class="blk use src-link" href="' + n.link + '" target="_blank" rel="noopener">' +
+          '<h4>去读原文</h4>' +
+          '<p>' + n.source + ' · ' + n.region + '<span class="go">↗</span></p>' +
+        '</a>'
+      : '<div class="blk use"><h4>来源</h4><p>' + n.source + ' · ' + n.region + '</p></div>';
+
+    return daylineHTML(now, md) +
+      '<article class="card enter" id="card">' +
+        '<div class="ctop">' +
+          '<span class="no">今日精选</span>' +
+          '<span class="chip">' + n.source + '</span>' +
+          '<span class="chip cat">' + (note.cat || n.cat) + '</span>' +
+          '<button class="icon-btn first" data-act="next" aria-label="换一条">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3.4v4.9h-4.9"/></svg>' +
+          '</button>' +
+          '<button class="fav ' + (isFav(n.id) ? "on" : "") + '" data-act="fav" data-id="' + n.id + '" aria-label="收藏">' + heartSVG() + '</button>' +
+        '</div>' +
+
+        '<h1>' + note.title + '</h1>' +
+        '<p class="hook">' + note.brief + '</p>' +
+
+        '<div class="blk kid">' +
+          '<h4>说人话</h4>' +
+          '<p>' + note.kid + '</p>' +
+        '</div>' +
+
+        '<div class="blk why">' +
+          '<h4>信息差到底差在哪</h4>' +
+          '<p>' + note.why + '</p>' +
+        '</div>' +
+
+        src +
+
+        '<div class="tags">' +
+          '<span class="tag">#' + n.source + '</span>' +
+          '<span class="tag">#' + n.region + '</span>' +
+          '<span class="tag">#' + fmtTime(n.time) + ' 抓取</span>' +
+        '</div>' +
+      '</article>' +
+
+      actionHTML() +
+      '<p class="hint">' + pushHintText() + '<br>今日这条来自实时抓取，全部 ' +
+        (FEED.count || 0) + ' 条在「信息流」里。</p>';
+  }
+
+  /* 今日卡：内置精选（没有网络或没有解读时的兜底） */
+  function viewTodayLocal(now, md) {
+    var it = currentItem();
+    markRead(it.id);
+
+    return daylineHTML(now, md) +
+      '<article class="card enter" id="card">' +
+        '<div class="ctop">' +
+          '<span style="font-size:17px;line-height:1">' + it.em + '</span>' +
+          '<span class="no">No.' + itemNo(it) + '</span>' +
+          '<span class="chip">' + it.region + '</span>' +
+          '<span class="chip cat">' + it.cat + '</span>' +
+          '<button class="icon-btn first" data-act="next" aria-label="换一条">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3.4v4.9h-4.9"/></svg>' +
+          '</button>' +
+          '<button class="fav ' + (isFav(it.id) ? "on" : "") + '" data-act="fav" data-id="' + it.id + '" aria-label="收藏">' + heartSVG() + '</button>' +
+        '</div>' +
+
+        '<h1>' + it.title + '</h1>' +
+        '<p class="hook">' + it.hook + '</p>' +
+
+        '<div class="blk kid">' +
+          '<h4>说人话</h4>' +
+          '<p>' + it.kid + '</p>' +
+        '</div>' +
+
+        '<div class="blk why">' +
+          '<h4>信息差到底差在哪</h4>' +
+          '<p>' + it.why + '</p>' +
+        '</div>' +
+
+        '<div class="blk use">' +
+          '<h4>你能怎么用</h4>' +
+          '<p>' + it.use + '</p>' +
+        '</div>' +
+
+        '<div class="tags">' + it.tags.map(function (t) { return '<span class="tag">#' + t + '</span>'; }).join("") + '</div>' +
+      '</article>' +
+
+      actionHTML() +
+      '<p class="hint">' + pushHintText() + '<br>今日这条是固定的，换一条只是加餐。</p>';
+  }
+
+  /* ---------------- 信息流 ---------------- */
+  function viewFeed() {
+    var items = FEED.items || [];
+    if (!items.length) {
+      return '<div class="sec-hd">信息流</div>' +
+        '<p class="sec-sub">还没有抓到内容。在电脑上运行一次 <b>python3 collector.py</b>，' +
+        '或者用本地服务打开这个页面（<b>python3 serve.py</b>），它就会自动更新。</p>';
+    }
+
+    var regions = [];
+    items.forEach(function (x) {
+      if (regions.indexOf(x.region) < 0) regions.push(x.region);
+    });
+    var cur = S.region;
+    var list = items.filter(function (x) { return cur === "全部" || x.region === cur; });
+
+    var filters = ['全部'].concat(regions).map(function (r) {
+      return '<button class="filter ' + (r === cur ? "on" : "") + '" data-act="region" data-id="' + r + '">' + r + '</button>';
+    }).join("");
+
+    var html = list.map(function (x) {
+      var note = noteOf(x);
+      var title = note ? note.title : x.title;
+      var desc = note ? note.brief : (x.brief || "").slice(0, 90);
+      if (!desc) desc = x.lang === "zh" ? "" : "英文原文 · 配置 AI 后可自动翻成中文";
+      return '' +
+        '<div class="feed-item" data-act="openNews" data-id="' + x.id + '">' +
+          '<div class="fi-top">' +
+            '<span class="fi-src">' + x.source + '</span>' +
+            '<span class="fi-cat">' + (note && note.cat ? note.cat : x.cat) + '</span>' +
+            (note ? '<span class="fi-ai">AI 解读</span>' : '') +
+            (x.lang !== "zh" ? '<span class="fi-lang">原文</span>' : '') +
+            '<span class="fi-time">' + (x.time || "") + '</span>' +
+          '</div>' +
+          '<h3>' + title + '</h3>' +
+          (desc ? '<p>' + desc + '</p>' : '') +
+        '</div>';
+    }).join("");
+
+    return '<div class="feed-hd">' +
+        '<div class="sec-hd">信息流</div>' +
+        (window.__FEED__ ? '<span class="offline-tag">离线版</span>'
+                         : '<button class="ghost-btn" data-act="refresh">刷新</button>') +
+      '</div>' +
+      '<p class="sec-sub">' + (FEED.generated_at || "") + ' 更新 · ' +
+        (FEED.count || items.length) + ' 条 · ' + (FEED.sources_ok || "?") + ' 个源' +
+        (FEED.llm ? '' : ' · 英文源保留原文') + '</p>' +
+      '<div class="filters">' + filters + '</div>' +
+      html;
+  }
+
+  /* ---------------- 原理馆 ---------------- */
+  function viewLab() {
+    var list = LAB.map(function (p) {
+      return '' +
+        '<div class="lab-item" data-act="openLab" data-id="' + p.id + '">' +
+          '<div class="lab-em">' + p.em + '</div>' +
+          '<div style="flex:1">' +
+            '<h3>' + p.title + '</h3>' +
+            '<p>' + p.one + '</p>' +
+          '</div>' +
+          '<div class="lab-go">›</div>' +
+        '</div>';
+    }).join("");
+
+    return '' +
+      '<div class="sec-hd">原理馆</div>' +
+      '<p class="sec-sub">挑一个你每天都在用、却从没搞懂的东西。每篇拆成 4~5 步，读完大约 2 分钟，不用懂任何专业词。</p>' +
+      list;
+  }
+
+  /* ---------------- 我的 ---------------- */
+  function permText() {
+    if (!("Notification" in window)) return "这个浏览器不支持系统通知";
+    var p = Notification.permission;
+    if (p === "granted") return "系统通知已允许";
+    if (p === "denied") return "系统通知被拒绝，可在浏览器设置里改";
+    return "还没允许系统通知";
+  }
+
+  function viewMe() {
+    var favs = S.fav.map(function (id) {
+      var it = null;
+      for (var i = 0; i < DAILY.length; i++) if (DAILY[i].id === id) it = DAILY[i];
+      if (!it) return "";
+      return '' +
+        '<div class="mini-fav" data-act="openDaily" data-id="' + it.id + '">' +
+          '<span class="em">' + it.em + '</span>' +
+          '<span class="tx">' + it.title + '</span>' +
+          '<span class="ar">›</span>' +
+        '</div>';
+    }).join("");
+
+    var canNotify = "Notification" in window;
+
+    return '' +
+      '<div class="sec-hd">我的</div>' +
+      '<p class="sec-sub">数据都存在你这台设备上，不上传、不登录。</p>' +
+
+      '<div class="stats">' +
+        '<div class="stat"><b>' + (S.streak || 1) + '</b><span>连续天数</span></div>' +
+        '<div class="stat"><b>' + S.read.length + '</b><span>已读条目</span></div>' +
+        '<div class="stat"><b>' + S.fav.length + '</b><span>收藏</span></div>' +
+      '</div>' +
+
+      '<div class="me-card">' +
+        '<h3><span>⏰</span>每天自动推送</h3>' +
+        '<p class="me-note">到点把当天的卡片推到你手机上。需要先允许系统通知；如果没允许，打开 App 也会直接看到当天内容。</p>' +
+        '<div class="row">' +
+          '<div class="lbl">开启每日推送<small>' + permText() + '</small></div>' +
+          '<button class="sw ' + (S.push.on ? "on" : "") + '" data-act="swPush" aria-label="开关"></button>' +
+        '</div>' +
+        '<div class="row">' +
+          '<div class="lbl">推送时间</div>' +
+          '<input type="time" id="pushTime" value="' + S.push.time + '" data-change="pushTime">' +
+        '</div>' +
+        '<div class="row">' +
+          '<div class="lbl">通知权限</div>' +
+          '<button class="ghost-btn" data-act="askPerm">' + (canNotify ? "申请" : "不支持") + '</button>' +
+        '</div>' +
+        '<div class="row">' +
+          '<div class="lbl">现在就试一条<small>看看推送长什么样</small></div>' +
+          '<button class="ghost-btn" data-act="testPush">发送</button>' +
+        '</div>' +
+      '</div>' +
+
+      (LOCAL ? '<div class="me-card">' +
+        '<h3><span>▣</span>在手机上打开</h3>' +
+        '<p class="me-note">手机连同一个 WiFi，扫码即开。打开后点浏览器菜单里的「添加到主屏幕」，下次一点就进。</p>' +
+        '<div class="qr-wrap"><img src="./qr.png" alt="手机访问二维码" onerror="this.parentNode.style.display=\'none\'"></div>' +
+        '<div class="qr-url">' + LOCAL.url + '</div>' +
+      '</div>' : '') +
+
+      '<div class="me-card">' +
+        '<h3><span>◎</span>数据源</h3>' +
+        '<p class="me-note">' + (FEED.generated_at
+            ? '最后更新 ' + FEED.generated_at + '，收录 ' + (FEED.count || 0) + ' 条，' + (FEED.sources_ok || 0) + ' 个源可用。'
+            : '还没有抓到内容。运行 collector.py 抓一次，或 serve.py 让它每天自动更新。') +
+          '要让它每天自动抓，在电脑上运行 <b>python3 serve.py</b>，页面保持打开即可。' +
+        '</p>' +
+        '<div class="row"><div class="lbl">AI 解读<small>配置 DD_LLM_KEY 后自动生成</small></div>' +
+          '<div class="val">' + (FEED.items || []).filter(function (x) { return x.kid; }).length + ' 条</div></div>' +
+        '<div class="row"><div class="lbl">英文源<small>没配 AI 时保留原文</small></div>' +
+          '<div class="val">' + (FEED.items || []).filter(function (x) { return x.lang !== 'zh'; }).length + ' 条</div></div>' +
+      '</div>' +
+
+      '<div class="me-card">' +
+        '<h3><span>♥</span>我的收藏</h3>' +
+        (favs || '<p class="empty">还没有收藏。看到想留着的，点卡片右上角那颗心。</p>') +
+      '</div>' +
+
+      '<div class="me-card">' +
+        '<h3><span>✎</span>关于这个小东西</h3>' +
+        '<p class="me-note">每天一条：一个国家和它「反常识」的日常。原理馆：把行业拆成小学生也能跟上的步骤。</p>' +
+        '<div class="row">' +
+          '<div class="lbl">装到桌面<small>iPhone：分享 → 添加到主屏幕；安卓：菜单 → 安装应用</small></div>' +
+          '<div class="val">像 App 一样</div>' +
+        '</div>' +
+        '<div class="row">' +
+          '<div class="lbl">内容数量<small>每天轮换，看完自动循环</small></div>' +
+          '<div class="val">' + DAILY.length + ' + ' + LAB.length + ' 篇</div>' +
+        '</div>' +
+        '<div class="row">' +
+          '<div class="lbl">数据存在哪<small>只在这台设备，不登录、不上传</small></div>' +
+          '<div class="val">本机</div>' +
+        '</div>' +
+      '</div>';
+  }
+
+  /* ---------------- 渲染 ---------------- */
+  function render() {
+    var main = $("#main");
+    var html;
+    if (S.view === "feed") html = viewFeed();
+    else if (S.view === "lab") html = viewLab();
+    else if (S.view === "me") html = viewMe();
+    else html = viewToday();
+    main.innerHTML = html;
+    main.scrollTop = 0;
+
+    var tabs = document.querySelectorAll("#tabbar button");
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.toggle("on", tabs[i].getAttribute("data-view") === S.view);
+    }
+  }
+
+  /* ---------------- 详情面板 ---------------- */
+  var sheet = $("#sheet");
+  var sheetBody = $("#sheetBody");
+
+  function openSheet() {
+    sheet.classList.add("on");
+    sheet.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+  function closeSheet() {
+    sheet.classList.remove("on");
+    sheet.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    setTimeout(function () { if (!sheet.classList.contains("on")) sheetBody.innerHTML = ""; }, 360);
+  }
+
+  function openLab(id) {
+    var p = null;
+    for (var i = 0; i < LAB.length; i++) if (LAB[i].id === id) p = LAB[i];
+    if (!p) return;
+
+    var steps = p.steps.map(function (s) {
+      return '<div class="step"><b>' + s.t + '</b><p>' + s.d + '</p></div>';
+    }).join("");
+
+    sheetBody.innerHTML = '' +
+      '<div class="sd-top"><div class="grab"></div></div>' +
+      '<div class="sd-em">' + p.em + '</div>' +
+      '<h2 class="sd-title">' + p.title + '</h2>' +
+      '<p class="sd-one">' + p.one + '</p>' +
+      '<div class="steps">' + steps + '</div>' +
+      '<div class="money"><b>钱是怎么分的</b>' + p.money + '</div>' +
+      '<div class="remember">' + p.remember + '</div>' +
+      '<button class="sd-close" data-close>收起</button>';
+    openSheet();
+  }
+
+  function openNews(id) {
+    var n = null;
+    (FEED.items || []).forEach(function (x) { if (x.id === id) n = x; });
+    if (!n) return;
+    var note = noteOf(n);
+
+    var head = '<div class="sd-top"><div class="grab"></div></div>' +
+      '<div style="display:flex;gap:6px;align-items:center;margin:16px 0 10px">' +
+        '<span class="chip">' + n.source + '</span>' +
+        '<span class="chip cat">' + (note && note.cat ? note.cat : n.cat) + '</span>' +
+        '<span class="fi-time" style="margin-left:auto">' + (n.time || "") + '</span>' +
+      '</div>';
+
+    var body = '<h2 class="sd-title">' + (note ? note.title : n.title) + '</h2>';
+
+    if (n.original_title) {
+      body += '<p class="sd-origin">' + n.original_title + '</p>';
+    }
+
+    if (note) {
+      body += '<p class="sd-one">' + note.brief + '</p>' +
+        '<div class="blk kid" style="margin-top:18px"><h4>说人话</h4><p>' + note.kid + '</p></div>' +
+        '<div class="blk why"><h4>信息差到底差在哪</h4><p>' + note.why + '</p></div>';
+    } else {
+      var raw = n.summary_raw || n.brief || "";
+      if (raw) body += '<p class="sd-one">' + raw + '</p>';
+    }
+
+    body += '<div class="money" style="margin-top:20px"><b>原始来源</b>' +
+      n.source + ' · ' + n.region + (n.link ? '' : ' · 无链接') + '</div>';
+
+    if (n.link) {
+      body += '<a class="sd-link" href="' + n.link + '" target="_blank" rel="noopener">去读原文 ↗</a>';
+    }
+
+    sheetBody.innerHTML = head + body +
+      '<button class="sd-close" data-close>收起</button>';
+    openSheet();
+  }
+
+  function openDaily(id) {
+    var it = null;
+    for (var i = 0; i < DAILY.length; i++) if (DAILY[i].id === id) it = DAILY[i];
+    if (!it) return;
+
+    sheetBody.innerHTML = '' +
+      '<div class="sd-top"><div class="grab"></div></div>' +
+      '<div class="sd-em">' + it.em + '</div>' +
+      '<div style="display:flex;gap:6px;margin-bottom:10px">' +
+        '<span class="chip">' + it.region + '</span><span class="chip cat">' + it.cat + '</span>' +
+      '</div>' +
+      '<h2 class="sd-title">' + it.title + '</h2>' +
+      '<p class="sd-one">' + it.hook + '</p>' +
+      '<div class="blk kid" style="margin-top:18px"><h4>说人话</h4><p>' + it.kid + '</p></div>' +
+      '<div class="blk why"><h4>信息差到底差在哪</h4><p>' + it.why + '</p></div>' +
+      '<div class="blk use"><h4>你能怎么用</h4><p>' + it.use + '</p></div>' +
+      '<button class="sd-close" data-close>收起</button>';
+    openSheet();
+  }
+
+  /* ---------------- 推送 ---------------- */
+  function canNotify() { return "Notification" in window; }
+
+  function notify(title, body) {
+    try {
+      if (canNotify() && Notification.permission === "granted") {
+        new Notification(title, { body: body, tag: "dd-daily", renotify: true });
+        return true;
+      }
+    } catch (e) {
+      /* 部分手机浏览器要求走 Service Worker，失败就退回 App 内提示 */
+    }
+    return false;
+  }
+
+  function askPerm() {
+    if (!canNotify()) { toast("这个浏览器不支持系统通知"); return; }
+    if (Notification.permission === "granted") { toast("已经是允许状态了"); return; }
+    Notification.requestPermission().then(function (r) {
+      render();
+      if (r === "granted") toast("好了，到点我会来叫你");
+      else toast("没授权。打开 App 也能看到当天内容");
+    }).catch(function () { toast("这个环境不支持申请通知"); });
+  }
+
+  function testPush() {
+    var h = headline();
+    var ok = notify(h.title, h.sub);
+    if (!ok) toast("没有通知权限，这里是预览：" + h.title);
+    else toast("已发送，看看通知栏");
+  }
+
+  function checkPush() {
+    if (!S.push.on) return;
+    if (!canNotify() || Notification.permission !== "granted") return;
+    var now = new Date();
+    var t = dkey(now);
+    if (S.push.last === t) return;
+    var parts = String(S.push.time).split(":");
+    var h = parseInt(parts[0], 10) || 0;
+    var m = parseInt(parts[1], 10) || 0;
+    var target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m, 0, 0);
+    if (now >= target) {
+      var h = headline();
+      notify(h.title, h.sub);
+      if (!document.hidden) toast("到点了 · 今天的内容已更新");
+      S.push.last = t;
+      store.set("push", S.push);
+    }
+  }
+
+  /* ---------------- 事件 ---------------- */
+  $("#main").addEventListener("click", function (e) {
+    var el = e.target.closest("[data-act]");
+    if (!el) return;
+    var act = el.getAttribute("data-act");
+    var id = el.getAttribute("data-id");
+
+    if (act === "fav") {
+      var i = S.fav.indexOf(id);
+      if (i > -1) { S.fav.splice(i, 1); toast("已取消收藏"); }
+      else { S.fav.unshift(id); toast("收好了，在「我的」里能找到"); }
+      store.set("fav", S.fav);
+      render();
+    } else if (act === "next") {
+      S.offset = (S.offset + 1) % DAILY.length;
+      render();
+    } else if (act === "refresh") {
+      toast("正在抓取，大概要 30 秒…");
+      fetch("./api/refresh", { method: "POST" })
+        .then(function (r) { return r.json(); })
+        .then(function (f) {
+          if (f && f.items && f.items.length) {
+            FEED = f;
+            render();
+            toast("已更新 · " + f.count + " 条");
+          } else {
+            toast("没抓到新内容，稍后再试");
+          }
+        })
+        .catch(function () { toast("需要在电脑上运行 python3 serve.py 才能实时抓取"); });
+    } else if (act === "region") {
+      S.region = id;
+      render();
+    } else if (act === "openNews") {
+      openNews(id);
+    } else if (act === "share") {
+      var n = todayNews();
+      var title, text;
+      if (n) {
+        var note = noteOf(n);
+        title = note.title;
+        text = note.title + "\n\n" + note.brief + "\n\n" + note.kid + "\n\n—— 每日信息差 · 来自 " + n.source;
+      } else {
+        var it = currentItem();
+        title = it.title;
+        text = it.title + "\n\n" + it.hook + "\n\n" + it.kid + "\n\n—— 每日信息差 No." + itemNo(it);
+      }
+      if (navigator.share) {
+        navigator.share({ title: title, text: text }).catch(function () {});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function () { toast("已复制，去粘贴给朋友"); }).catch(function () {
+          toast("长按文字可以手动复制");
+        });
+      } else {
+        toast("长按文字可以手动复制");
+      }
+    } else if (act === "openLab") {
+      openLab(id);
+    } else if (act === "openDaily") {
+      openDaily(id);
+    } else if (act === "swPush") {
+      S.push.on = !S.push.on;
+      store.set("push", S.push);
+      render();
+      if (S.push.on) {
+        if (canNotify() && Notification.permission === "default") askPerm();
+        else toast("已开启，每天 " + S.push.time + " 推给你");
+      } else {
+        toast("已关闭每日推送");
+      }
+    } else if (act === "askPerm") {
+      askPerm();
+    } else if (act === "testPush") {
+      testPush();
+    }
+  });
+
+  $("#main").addEventListener("change", function (e) {
+    var el = e.target.closest("[data-change]");
+    if (!el) return;
+    if (el.getAttribute("data-change") === "pushTime") {
+      S.push.time = el.value || "08:30";
+      S.push.last = "";
+      store.set("push", S.push);
+      toast("推送时间改成 " + S.push.time);
+      render();
+    }
+  });
+
+  $("#tabbar").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-view]");
+    if (!b) return;
+    S.view = b.getAttribute("data-view");
+    if (S.view === "today") S.offset = 0;
+    render();
+  });
+
+  $("#btnToday").addEventListener("click", function () {
+    S.view = "today";
+    S.offset = 0;
+    render();
+  });
+
+  sheet.addEventListener("click", function (e) {
+    if (e.target.closest("[data-close]")) closeSheet();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeSheet();
+  });
+
+  /* 下拉一点点时给顶栏加阴影（细节） */
+  var mainEl = $("#main");
+  mainEl.addEventListener("scroll", function () {
+    $(".topbar").style.boxShadow = mainEl.scrollTop > 6 ? "0 8px 18px -18px rgba(74,52,24,.8)" : "none";
+  }, { passive: true });
+
+  /* ---------------- 加载实时内容 ---------------- */
+  function loadFeed() {
+    // 单文件离线版：数据直接嵌在页面里
+    if (window.__FEED__) {
+      FEED = window.__FEED__;
+      NOTES = window.__NOTES__ || {};
+      render();
+      return;
+    }
+    if (!window.fetch) return;
+    function j(u) {
+      return fetch(u, { cache: "no-store" }).then(function (r) {
+        return r.ok ? r.json() : null;
+      }).catch(function () { return null; });
+    }
+    Promise.all([j("./feed.json"), j("./ai-notes.json"), j("./local.json")]).then(function (res) {
+      if (res[0] && res[0].items && res[0].items.length) FEED = res[0];
+      if (res[1] && res[1].notes) NOTES = res[1].notes;
+      if (res[2] && res[2].url) LOCAL = res[2];
+      if (S.view === "today" || S.view === "feed") render();
+    }).catch(function () {});
+  }
+
+  /* ---------------- 启动 ---------------- */
+  touchStreak();
+  render();
+  loadFeed();
+  setTimeout(checkPush, 1200);
+  setInterval(checkPush, 20000);
+
+  /* 页面重新可见时立刻补一次检查（手机后台会冻结定时器） */
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) setTimeout(checkPush, 400);
+  });
+
+  /* 第一次来，给一句引导 */
+  if (!store.get("seen", false)) {
+    setTimeout(function () {
+      toast("右上角换一条 · 底部还有信息流和原理馆");
+      store.set("seen", true);
+    }, 1600);
+  }
+
+  /* 装到桌面 + 断网可用 */
+  if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("./sw.js").catch(function () {});
+    });
+  }
+
+  /* 支持用链接直达某一页 / 某一条（方便分享） */
+  (function () {
+    var qs = new URLSearchParams(location.search);
+    var v = qs.get("v");
+    if (v === "lab" || v === "me") { S.view = v; render(); }
+    var id = qs.get("id");
+    if (id) {
+      for (var i = 0; i < LAB.length; i++) if (LAB[i].id === id) { openLab(id); return; }
+      for (var j = 0; j < DAILY.length; j++) if (DAILY[j].id === id) { openDaily(id); return; }
+    }
+  })();
+})();
+
+</script>
+</body>
+</html>
