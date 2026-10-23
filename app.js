@@ -105,8 +105,15 @@
     return marks >= 1 || t.length > 42;
   }
 
+  /* 灾害、事故这类不适合当「今日精选」，留在信息流里 */
+  function isHeavy(x) {
+    return /地震|遇难|死亡|身亡|事故|火灾|坠|袭击|冲突|战争|疫情|病例|洪水|台风/.test(x.title || "");
+  }
+
   function newsPool() {
-    return (FEED.items || []).filter(function (x) { return noteOf(x) && !isDigest(x); });
+    return (FEED.items || []).filter(function (x) {
+      return noteOf(x) && !isDigest(x) && !isHeavy(x);
+    });
   }
 
   function todayNews() {
