@@ -436,3 +436,64 @@ a.src-link:active{transform:scale(.99)}
   font-size:10.5px;color:#a89b86;letter-spacing:.08em;
   border:1px solid var(--line);border-radius:99px;padding:4px 10px;
 }
+
+/* ---------- 原理馆：搜索与分类 ---------- */
+.lab-bar{
+  position:sticky;top:0;z-index:6;
+  margin:0 -18px;padding:6px 18px 2px;
+  background:linear-gradient(var(--paper) 86%,rgba(244,239,227,.92));
+  backdrop-filter:blur(6px);
+}
+.searchbox{position:relative;margin:0 0 12px}
+.searchbox svg{
+  position:absolute;left:13px;top:50%;transform:translateY(-50%);
+  width:16px;height:16px;fill:none;stroke:#b0a596;
+  stroke-width:1.8;stroke-linecap:round;
+}
+.searchbox input{
+  width:100%;height:44px;border-radius:14px;border:1px solid var(--line);
+  background:rgba(255,253,247,.95);padding:0 14px 0 38px;
+  font-size:14px;font-family:inherit;color:var(--ink);outline:none;
+  -webkit-appearance:none;
+}
+.searchbox input:focus{border-color:#d8c9a8;box-shadow:0 0 0 3px rgba(233,200,107,.2)}
+.searchbox input::placeholder{color:#b5a999;font-size:13px}
+
+.read-dot{
+  display:inline-block;width:5px;height:5px;border-radius:50%;
+  background:var(--red);opacity:.45;margin-left:6px;vertical-align:3px;
+}
+
+.sd-x{
+  position:absolute;right:0;top:6px;width:32px;height:32px;border-radius:50%;
+  border:0;background:rgba(255,253,247,.92);color:#8a7f6e;font-size:13px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  line-height:1;box-shadow:0 4px 10px -8px rgba(74,52,24,.8);
+}
+.sd-x:active{transform:scale(.92)}
+
+/* 同一件事 · 不同说法 */
+.clusters{margin:0 0 16px}
+.cluster{
+  background:linear-gradient(160deg,#241f19,#161310);
+  color:#efe9dc;border-radius:20px;padding:17px 17px 15px;margin-bottom:10px;
+  box-shadow:0 16px 30px -22px rgba(0,0,0,.7);
+}
+.cl-kicker{
+  font-size:9.5px;letter-spacing:.2em;color:#c9a227;margin-bottom:8px;
+}
+.cl-topic{
+  font-family:var(--serif);font-size:17px;line-height:1.5;margin-bottom:11px;color:#fff8ec;
+}
+.cl-items{border-top:1px solid rgba(255,255,255,.1);padding-top:10px}
+.cl-row{display:flex;gap:7px;align-items:baseline;margin-bottom:7px}
+.cl-region{
+  flex:0 0 auto;font-size:9.5px;color:#1b1712;background:#c9a227;
+  border-radius:4px;padding:2px 5px;letter-spacing:.04em;
+}
+.cl-src{flex:0 0 auto;font-size:9.5px;color:#8d8271}
+.cl-t{font-size:12.5px;line-height:1.55;color:#ded6c7}
+.cl-diff{
+  margin-top:10px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.14);
+  font-size:12.5px;line-height:1.7;color:#e8dfcd;
+}

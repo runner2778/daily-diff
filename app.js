@@ -21,6 +21,7 @@
   var FEED = { items: [] };
   var NOTES = {};
   var LOCAL = null;
+  var LIB = { items: [] };
 
   var S = {
     fav: store.get("fav", []),
@@ -30,7 +31,9 @@
     push: store.get("push", { on: false, time: "08:30", last: "" }),
     view: "today",
     offset: 0,
-    region: "全部"
+    region: "全部",
+    q: "",
+    cat: "全部"
   };
 
   /* ---------------- 工具 ---------------- */
@@ -264,6 +267,28 @@
       '<p class="hint">' + pushHintText() + '<br>今日这条是固定的，换一条只是加餐。</p>';
   }
 
+  /* ---------------- 同一件事，不同的说法 ---------------- */
+  function clustersHTML() {
+    var cs = (FEED.clusters || []);
+    if (!cs.length) return "";
+    var html = cs.map(function (c) {
+      var rows = (c.items || []).map(function (it) {
+        return '<div class="cl-row">' +
+            '<span class="cl-region">' + it.region + '</span>' +
+            '<span class="cl-src">' + it.source + '</span>' +
+            '<span class="cl-t">' + it.title + '</span>' +
+          '</div>';
+      }).join("");
+      return '<div class="cluster">' +
+          '<div class="cl-kicker">同一件事 · 不同说法</div>' +
+          '<div class="cl-topic">' + c.topic + '</div>' +
+          '<div class="cl-items">' + rows + '</div>' +
+          '<div class="cl-diff">' + c.diff + '</div>' +
+        '</div>';
+    }).join("");
+    return '<div class="clusters">' + html + '</div>';
+  }
+
   /* ---------------- 信息流 ---------------- */
   function viewFeed() {
     var items = FEED.items || [];
@@ -311,28 +336,77 @@
       '<p class="sec-sub">' + (FEED.generated_at || "") + ' 更新 · ' +
         (FEED.count || items.length) + ' 条 · ' + (FEED.sources_ok || "?") + ' 个源' +
         (FEED.llm ? '' : ' · 英文源保留原文') + '</p>' +
+      clustersHTML() +
       '<div class="filters">' + filters + '</div>' +
       html;
   }
 
   /* ---------------- 原理馆 ---------------- */
+  function allLab() {
+    var seen = {}, out = [];
+    (LIB.items || []).concat(LAB).forEach(function (x) {
+      if (!x || !x.id || seen[x.id]) return;
+      seen[x.id] = 1;
+      out.push(x);
+    });
+    return out;
+  }
+
+  function labCats() {
+    var c = [];
+    allLab().forEach(function (x) { if (x.cat && c.indexOf(x.cat) < 0) c.push(x.cat); });
+    return c;
+  }
+
+  function labFiltered() {
+    var q = (S.q || "").trim().toLowerCase();
+    var cat = S.cat || "全部";
+    return allLab().filter(function (x) {
+      if (cat !== "全部" && x.cat !== cat) return false;
+      if (!q) return true;
+      var hay = (x.title + " " + x.one + " " + (x.tags || []).join(" ") + " " + x.cat).toLowerCase();
+      return hay.indexOf(q) >= 0;
+    });
+  }
+
+  function labItemHTML(p) {
+    var read = S.read.indexOf(p.id) > -1;
+    return '<div class="lab-item" data-act="openLab" data-id="' + p.id + '">' +
+        '<div class="lab-em">' + p.em + '</div>' +
+        '<div style="flex:1">' +
+          '<h3>' + p.title + (read ? '<span class="read-dot" title="读过了"></span>' : '') + '</h3>' +
+          '<p>' + p.one + '</p>' +
+        '</div>' +
+        '<div class="lab-go">›</div>' +
+      '</div>';
+  }
+
+  function labListHTML() {
+    var items = labFiltered();
+    if (!items.length) {
+      return '<p class="empty">没找到。换个词试试，比如「电」「钱」「快递」「工资」。</p>';
+    }
+    return items.map(labItemHTML).join("");
+  }
+
   function viewLab() {
-    var list = LAB.map(function (p) {
-      return '' +
-        '<div class="lab-item" data-act="openLab" data-id="' + p.id + '">' +
-          '<div class="lab-em">' + p.em + '</div>' +
-          '<div style="flex:1">' +
-            '<h3>' + p.title + '</h3>' +
-            '<p>' + p.one + '</p>' +
-          '</div>' +
-          '<div class="lab-go">›</div>' +
-        '</div>';
+    var cats = labCats();
+    var cur = S.cat || "全部";
+    var chips = ["全部"].concat(cats).map(function (c) {
+      return '<button class="filter ' + (c === cur ? "on" : "") + '" data-act="labcat" data-id="' + c + '">' + c + '</button>';
     }).join("");
 
-    return '' +
-      '<div class="sec-hd">原理馆</div>' +
-      '<p class="sec-sub">挑一个你每天都在用、却从没搞懂的东西。每篇拆成 4~5 步，读完大约 2 分钟，不用懂任何专业词。</p>' +
-      list;
+    return '<div class="sec-hd">原理馆</div>' +
+      '<p class="sec-sub">这个世界是怎么运转的。共 ' + allLab().length +
+        ' 篇，每篇 4~5 步，读完 2 分钟，不用懂专业词。</p>' +
+      '<div class="lab-bar">' +
+      '<div class="searchbox">' +
+        '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>' +
+        '<input id="labSearch" type="search" placeholder="搜一个你好奇的东西：电、快递、工资、疫苗…" value="' + (S.q || "") + '">' +
+      '</div>' +
+      '<div class="filters">' + chips + '</div>' +
+      '</div>' +
+      '<div id="labList">' + labListHTML() + '</div>';
   }
 
   /* ---------------- 我的 ---------------- */
@@ -463,20 +537,28 @@
     sheet.classList.remove("on");
     sheet.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
-    setTimeout(function () { if (!sheet.classList.contains("on")) sheetBody.innerHTML = ""; }, 360);
+    setTimeout(function () {
+      if (!sheet.classList.contains("on")) sheetBody.innerHTML = "";
+      if (S.view === "lab") {
+        var box = $("#labList");
+        if (box) box.innerHTML = labListHTML();
+      }
+    }, 360);
   }
 
   function openLab(id) {
     var p = null;
-    for (var i = 0; i < LAB.length; i++) if (LAB[i].id === id) p = LAB[i];
+    var all = allLab();
+    for (var i = 0; i < all.length; i++) if (all[i].id === id) p = all[i];
     if (!p) return;
+    markRead(p.id);
 
     var steps = p.steps.map(function (s) {
       return '<div class="step"><b>' + s.t + '</b><p>' + s.d + '</p></div>';
     }).join("");
 
     sheetBody.innerHTML = '' +
-      '<div class="sd-top"><div class="grab"></div></div>' +
+      '<div class="sd-top"><div class="grab"></div><button class="sd-x" data-close aria-label="关闭">✕</button></div>' +
       '<div class="sd-em">' + p.em + '</div>' +
       '<h2 class="sd-title">' + p.title + '</h2>' +
       '<p class="sd-one">' + p.one + '</p>' +
@@ -493,7 +575,7 @@
     if (!n) return;
     var note = noteOf(n);
 
-    var head = '<div class="sd-top"><div class="grab"></div></div>' +
+    var head = '<div class="sd-top"><div class="grab"></div><button class="sd-x" data-close aria-label="关闭">✕</button></div>' +
       '<div style="display:flex;gap:6px;align-items:center;margin:16px 0 10px">' +
         '<span class="chip">' + n.source + '</span>' +
         '<span class="chip cat">' + (note && note.cat ? note.cat : n.cat) + '</span>' +
@@ -533,7 +615,7 @@
     if (!it) return;
 
     sheetBody.innerHTML = '' +
-      '<div class="sd-top"><div class="grab"></div></div>' +
+      '<div class="sd-top"><div class="grab"></div><button class="sd-x" data-close aria-label="关闭">✕</button></div>' +
       '<div class="sd-em">' + it.em + '</div>' +
       '<div style="display:flex;gap:6px;margin-bottom:10px">' +
         '<span class="chip">' + it.region + '</span><span class="chip cat">' + it.cat + '</span>' +
@@ -628,6 +710,9 @@
           }
         })
         .catch(function () { toast("需要在电脑上运行 python3 serve.py 才能实时抓取"); });
+    } else if (act === "labcat") {
+      S.cat = id;
+      render();
     } else if (act === "region") {
       S.region = id;
       render();
@@ -675,6 +760,14 @@
     }
   });
 
+  $("#main").addEventListener("input", function (e) {
+    if (e.target && e.target.id === "labSearch") {
+      S.q = e.target.value;
+      var box = $("#labList");
+      if (box) box.innerHTML = labListHTML();
+    }
+  });
+
   $("#main").addEventListener("change", function (e) {
     var el = e.target.closest("[data-change]");
     if (!el) return;
@@ -717,6 +810,7 @@
 
   /* ---------------- 加载实时内容 ---------------- */
   function loadFeed() {
+    if (window.__LIB__) LIB = window.__LIB__;
     // 单文件离线版：数据直接嵌在页面里
     if (window.__FEED__) {
       FEED = window.__FEED__;
@@ -730,10 +824,11 @@
         return r.ok ? r.json() : null;
       }).catch(function () { return null; });
     }
-    Promise.all([j("./feed.json"), j("./ai-notes.json"), j("./local.json")]).then(function (res) {
+    Promise.all([j("./feed.json"), j("./ai-notes.json"), j("./local.json"), j("./library.json")]).then(function (res) {
       if (res[0] && res[0].items && res[0].items.length) FEED = res[0];
       if (res[1] && res[1].notes) NOTES = res[1].notes;
       if (res[2] && res[2].url) LOCAL = res[2];
+      if (res[3] && res[3].items) LIB = res[3];
       if (S.view === "today" || S.view === "feed") render();
     }).catch(function () {});
   }

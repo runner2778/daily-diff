@@ -44,6 +44,11 @@ def main():
     except Exception:
         notes = {}
 
+    try:
+        lib = json.loads(read("library.json"))
+    except Exception:
+        lib = {"items": []}
+
     # 图标内嵌（没有也能用）
     icon_tag = ""
     try:
@@ -60,8 +65,8 @@ def main():
     html = html.replace('<script src="data.js"></script>',
                         "<script>\n%s\n</script>" % data_js)
     html = html.replace('<script src="app.js"></script>',
-                        "<script>window.__FEED__=%s;window.__NOTES__=%s;</script>\n<script>\n%s\n</script>"
-                        % (safe_json(feed), safe_json(notes), app_js))
+                        "<script>window.__FEED__=%s;window.__NOTES__=%s;window.__LIB__=%s;</script>\n<script>\n%s\n</script>"
+                        % (safe_json(feed), safe_json(notes), safe_json(lib), app_js))
 
     # 输出到 dist/，只放前端文件——脚本、密钥、二维码都不进去
     dist = os.path.join(HERE, "dist")
@@ -69,7 +74,7 @@ def main():
         os.makedirs(dist)
 
     for name in ("index.html", "style.css", "app.js", "data.js", "feed.json",
-                 "ai-notes.json", "manifest.json", "sw.js", "icon-192.png", "icon-512.png"):
+                 "ai-notes.json", "library.json", "manifest.json", "sw.js", "icon-192.png", "icon-512.png"):
         if os.path.exists(name):
             with open(name, "rb") as src, open(os.path.join(dist, name), "wb") as dst:
                 dst.write(src.read())

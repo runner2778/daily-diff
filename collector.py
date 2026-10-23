@@ -226,6 +226,65 @@ def value_score(it):
     return s
 
 
+
+
+def find_clusters(items):
+    """找出「同一件事、不同来源说法不同」的新闻组——这才是真正的信息差"""
+    key = os.environ.get("DD_LLM_KEY")
+    if not key or len(items) < 4:
+        return []
+    base = os.environ.get("DD_LLM_BASE", "https://api.openai.com/v1").rstrip("/")
+    model = os.environ.get("DD_LLM_MODEL", "gpt-4o-mini")
+
+    payload = [{"id": x["id"], "source": x["source"], "region": x["region"],
+                "title": x.get("title_zh") or x["title"]} for x in items]
+
+    prompt = (
+        "下面是今天抓到的新闻列表。请找出 2~4 组「报道的是同一件事，但标题的侧重或角度不同」的新闻。\n"
+        "每组输出：{\"topic\":\"一句话说清这件事，25字内\","
+        "\"ids\":[\"新闻id1\",\"新闻id2\"],"
+        "\"diff\":\"两边的说法差在哪：谁强调什么、谁漏掉了什么，80字内\"}\n"
+        "规则：ids 必须是列表里真实存在的 id，每组至少 2 条；找不到就输出 []。只输出 JSON 数组。\n\n"
+        + json.dumps(payload, ensure_ascii=False)
+    )
+
+    body = json.dumps({
+        "model": model,
+        "messages": [
+            {"role": "system", "content": "你是媒体分析编辑，只输出 JSON。"},
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": 0.3,
+    }).encode("utf-8")
+
+    req = urllib.request.Request(base + "/chat/completions", data=body, headers={
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + key,
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            data = json.loads(r.read().decode("utf-8"))
+        text = data["choices"][0]["message"]["content"].strip()
+        text = re.sub(r"^```(json)?|```$", "", text, flags=re.M).strip()
+        a, b = text.find("["), text.rfind("]")
+        rows = json.loads(text[a:b + 1])
+        by_id = {x["id"]: x for x in items}
+        out = []
+        for r in rows:
+            ids = [i for i in r.get("ids", []) if i in by_id]
+            if len(ids) >= 2:
+                out.append({
+                    "topic": r.get("topic", ""),
+                    "diff": r.get("diff", ""),
+                    "items": [{"id": i, "title": by_id[i].get("title_zh") or by_id[i]["title"],
+                               "source": by_id[i]["source"], "region": by_id[i]["region"]} for i in ids],
+                })
+        return out
+    except Exception as ex:
+        print("  聚类失败（%s）" % type(ex).__name__)
+        return []
+
+
 def item_id(it):
     return hashlib.md5((it["title"] + it["source"]).encode("utf-8")).hexdigest()[:10]
 
@@ -366,6 +425,8 @@ def collect(limit=60, use_llm=True, quiet=False):
     if use_llm and llm_available():
         items = llm_generate(items)
 
+    clusters = find_clusters(items) if (use_llm and llm_available()) else []
+
     final = []
     for it in items:
         dt = it.pop("_dt", None)
@@ -393,6 +454,7 @@ def collect(limit=60, use_llm=True, quiet=False):
         "sources_fail": len(errors),
         "errors": errors[:8],
         "llm": bool(use_llm and llm_available()),
+        "clusters": clusters,
         "items": final,
     }
 
