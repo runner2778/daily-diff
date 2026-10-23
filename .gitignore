@@ -4,3 +4,4 @@ __pycache__/
 qr.png
 local.json
 .DS_Store
+dist/
